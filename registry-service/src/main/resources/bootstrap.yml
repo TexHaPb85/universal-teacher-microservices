@@ -13,6 +13,9 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true #when the application registers with eureka, it uses its IP address rather than its hostname
+    hostname: localhost
   client:
     registerWithEureka: false #tells the built-in eureka client to not register itself with eureka, because we should act as a server
     fetchRegistry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
