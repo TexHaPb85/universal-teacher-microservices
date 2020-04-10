@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Words</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<div>
+    <table border="1">
+        <tr>
+            <th>Word</th>
+            <th>Translation</th>
+            <th>Examples</th>
+        </tr>
+        <!--/*@thymesVar id="words" type="List<Word>"*/-->
+        <tr th:each="word : ${words}">
+            <td th:utext="${word.getWord()}">...</td>
+            <td th:utext="${word.getTranslation()}">...</td>
+            <td th:utext="${word.getExamples()}">...</td>
+        </tr>
+    </table>
+</div>
+
+
+<form th:action="@{/words}" th:object="${newWord}" method="post">
+    <p>Add new word
+        <input type="text" id="word" placeholder="word" th:field="*{word}"/>
+        <input type="text" id="translation" placeholder="translation" th:field="*{translation}">
+    </p>
+    <input type="submit" value="Add word" />
+</form>
+
+</body>
+</html>

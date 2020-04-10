@@ -19,7 +19,7 @@ class EnglishStudyServiceApplicationTests {
 
     @Test
     void saveTest(){
-        Word word = new Word("1","word","слово");
+        Word word = new Word("word","слово");
         wordRepository.save(word);
         Assert.isTrue(wordRepository.findById("1").isPresent());
     }

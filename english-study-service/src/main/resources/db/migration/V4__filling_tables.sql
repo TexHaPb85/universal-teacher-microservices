@@ -1,14 +1,14 @@
 insert into words
-values ('1', 'зберігання, наполегливість', 'persistence');
+values ('зберігання, наполегливість', 'persistence');
 insert into words
-values ('2', 'здійснювати', 'carry out');
+values ('здійснювати', 'carry out');
 insert into words
-values ('3', 'з`ясувати', 'figure out');
+values ('з`ясувати', 'figure out');
 
 
 insert into examples
-values ('persistence with spring', 'зберігання з спрінг', '1');
+values ('persistence with spring', 'зберігання з спрінг', 'persistence');
 insert into examples
-values ('spring figures out the control', 'spring здійснює контроль', '2');
+values ('spring figures out the control', 'spring здійснює контроль', 'carry out');
 insert into examples
-values ('spring security figures out the authentication', 'spring security здійснює фгтунтифікацію', '2');
+values ('spring security figures out the authentication', 'spring security здійснює фгтунтифікацію', 'carry out');

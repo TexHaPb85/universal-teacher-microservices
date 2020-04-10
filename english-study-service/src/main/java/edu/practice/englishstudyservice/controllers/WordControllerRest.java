@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("words")
+@RequestMapping("words-rest")
 public class WordControllerRest {
     private final WordService wordService;
 

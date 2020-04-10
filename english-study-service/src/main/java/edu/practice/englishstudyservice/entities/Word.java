@@ -8,28 +8,19 @@ import java.util.List;
 @Table(name = "words")
 public class Word implements Serializable {
     @Id
-    private String word_id;
+    @Column(name = "word")
     private String word;
     private String translation;
 
     @OneToMany(mappedBy="word")
     private List<Example> examples;
 
-    public Word(String word_id, String word, String translation) {
-        this.word_id = word_id;
+    public Word(String word, String translation) {
         this.word = word;
         this.translation = translation;
     }
 
     public Word() {
-    }
-
-    public String getWord_id() {
-        return word_id;
-    }
-
-    public void setWord_id(String word_id) {
-        this.word_id = word_id;
     }
 
     public String getWord() {
@@ -59,7 +50,6 @@ public class Word implements Serializable {
     @Override
     public String toString() {
         return "Word{" +
-                "word_id='" + word_id + '\'' +
                 ", word='" + word + '\'' +
                 ", translation='" + translation + '\'' +
                 ", examples=" + examples +

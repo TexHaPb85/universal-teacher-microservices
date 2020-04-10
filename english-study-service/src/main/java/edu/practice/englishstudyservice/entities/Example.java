@@ -49,4 +49,11 @@ public class Example implements Serializable {
     public void setWord(Word word) {
         this.word = word;
     }
+
+
+    @Override
+    public String toString() {
+        return  "\n" + sentence  + " - " +
+                "\n" + translation;
+    }
 }
