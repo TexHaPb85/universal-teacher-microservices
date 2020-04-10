@@ -1,4 +1,4 @@
-package edu.practice.englishstudyservice.controllers;
+package edu.practice.englishstudyservice.controllers.rest;
 
 import edu.practice.englishstudyservice.entities.Word;
 import edu.practice.englishstudyservice.services.WordService;

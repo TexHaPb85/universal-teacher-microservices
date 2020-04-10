@@ -10,7 +10,7 @@ create table users
 );
 
 insert into users
-values (1001, '1234', '+38(095)-123-45-67', 'user');
+values (1001, 'user', 'def1069c94af8cfa1c952ee0f16fd3f179986d7b6d298627d97d49db79ae4d6ca0c9c67aa9f54105', '+38(095)-123-45-67');
 
 insert into users
-values (1002, '1234', '+38(098)-123-45-67', 'mike');
+values (1002, 'mike', 'def1069c94af8cfa1c952ee0f16fd3f179986d7b6d298627d97d49db79ae4d6ca0c9c67aa9f54105', '+38(098)-123-45-67');

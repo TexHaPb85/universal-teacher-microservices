@@ -1,4 +1,4 @@
-package edu.practice.englishstudyservice.controllers;
+package edu.practice.englishstudyservice.controllers.simple;
 
 import edu.practice.englishstudyservice.entities.Example;
 import edu.practice.englishstudyservice.entities.Word;
@@ -36,17 +36,17 @@ public class WordController {
     }
 
     @GetMapping("/{word}")
-    public String getWord(@PathVariable String word, Model model){
+    public String getWord(@PathVariable String word, Model model) {
         Word wordObj = wordService.getWordById(word);
-        model.addAttribute("word",wordObj);
-        model.addAttribute("example",new Example());
+        model.addAttribute("word", wordObj);
+        model.addAttribute("example", new Example());
         return "word.html";
     }
 
     @PostMapping("/{word}")
-    public String addExample(@PathVariable String word, @ModelAttribute Example example){
+    public String addExample(@PathVariable String word, @ModelAttribute Example example) {
         System.out.println(example);
-        wordService.addExampleToWord(word,example);
-        return "redirect:/words/"+word;
+        wordService.addExampleToWord(word, example);
+        return "redirect:/words/" + word;
     }
 }

@@ -1,6 +1,7 @@
-package edu.practice.englishstudyservice.controllers;
+package edu.practice.englishstudyservice.controllers.simple;
 
 import edu.practice.englishstudyservice.entities.RegistrationForm;
+import edu.practice.englishstudyservice.entities.User;
 import edu.practice.englishstudyservice.repos.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -25,7 +26,9 @@ public class RegistrationController {
     }
     @PostMapping
     public String processRegistration(RegistrationForm form) {
-        userRepo.save(form.toUser(passwordEncoder));
+        User u = form.toUser(passwordEncoder);
+        System.out.println(u);
+        userRepo.save(u);
         return "redirect:/login";
     }
 }

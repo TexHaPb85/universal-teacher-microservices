@@ -1,4 +1,4 @@
-package edu.practice.englishstudyservice.controllers;
+package edu.practice.englishstudyservice.controllers.simple;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
