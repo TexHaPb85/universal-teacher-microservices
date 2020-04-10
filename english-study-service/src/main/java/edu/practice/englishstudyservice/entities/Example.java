@@ -53,7 +53,7 @@ public class Example implements Serializable {
 
     @Override
     public String toString() {
-        return  "\n" + sentence  + " - " +
+        return  "\n" + sentence  + " --> " +
                 "\n" + translation;
     }
 }

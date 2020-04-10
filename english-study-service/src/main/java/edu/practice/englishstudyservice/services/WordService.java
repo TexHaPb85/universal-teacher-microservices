@@ -1,5 +1,6 @@
 package edu.practice.englishstudyservice.services;
 
+import edu.practice.englishstudyservice.entities.Example;
 import edu.practice.englishstudyservice.entities.Word;
 import edu.practice.englishstudyservice.repos.ExamplesRepository;
 import edu.practice.englishstudyservice.repos.WordRepository;
@@ -31,6 +32,12 @@ public class WordService {
 
     public Word addWord(Word word) {
         return wordRepository.save(word);
+    }
+
+    public void addExampleToWord(String word, Example example){
+        Word wordObj = wordRepository.getOne(word);
+        example.setWord(wordObj);
+        examplesRepository.save(example);
     }
 
     public void deleteWordById(String id) {
