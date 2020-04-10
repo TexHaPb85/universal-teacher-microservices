@@ -1,36 +1,35 @@
 package edu.practice.englishstudyservice.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "words")
-public class Word {
+public class Word implements Serializable {
     @Id
-    private String id;
+    private String word_id;
     private String word;
     private String translation;
 
-    private List<String> examples;
+    @OneToMany(mappedBy="word")
+    private List<Example> examples;
 
-    public Word(String id, String word, String translation, List<String> examples) {
-        this.id = id;
+    public Word(String word_id, String word, String translation) {
+        this.word_id = word_id;
         this.word = word;
         this.translation = translation;
-        this.examples = examples;
     }
 
     public Word() {
     }
 
-    public String getId() {
-        return id;
+    public String getWord_id() {
+        return word_id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setWord_id(String word_id) {
+        this.word_id = word_id;
     }
 
     public String getWord() {
@@ -49,11 +48,21 @@ public class Word {
         this.translation = translation;
     }
 
-    public List<String> getExamples() {
+    public List<Example> getExamples() {
         return examples;
     }
 
-    public void setExamples(List<String> examples) {
+    public void setExamples(List<Example> examples) {
         this.examples = examples;
+    }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "word_id='" + word_id + '\'' +
+                ", word='" + word + '\'' +
+                ", translation='" + translation + '\'' +
+                ", examples=" + examples +
+                '}';
     }
 }

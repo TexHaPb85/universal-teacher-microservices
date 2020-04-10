@@ -1,2 +1,21 @@
 server:
   port: 9005
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:english_db
+    driverClassName: org.h2.Driver
+    username: mike
+    password: 1234
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  h2:
+    console:
+        path: /h2
+        enabled: true
+  flyway:
+    enabled: true
+
