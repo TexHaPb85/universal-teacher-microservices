@@ -1,7 +1,7 @@
 package edu.practice.englishstudyservice.services;
 
-import edu.practice.englishstudyservice.entities.Example;
-import edu.practice.englishstudyservice.entities.Word;
+import edu.practice.englishstudyservice.domain.Example;
+import edu.practice.englishstudyservice.domain.Word;
 import edu.practice.englishstudyservice.repos.ExamplesRepository;
 import edu.practice.englishstudyservice.repos.WordRepository;
 import org.springframework.stereotype.Service;

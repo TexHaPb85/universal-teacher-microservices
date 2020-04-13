@@ -1,8 +1,7 @@
 package edu.practice.englishstudyservice.controllers.rest;
 
-import edu.practice.englishstudyservice.entities.User;
+import edu.practice.englishstudyservice.domain.User;
 import edu.practice.englishstudyservice.services.UserDetailServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

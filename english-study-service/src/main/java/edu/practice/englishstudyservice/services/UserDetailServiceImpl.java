@@ -1,6 +1,6 @@
 package edu.practice.englishstudyservice.services;
 
-import edu.practice.englishstudyservice.entities.User;
+import edu.practice.englishstudyservice.domain.User;
 import edu.practice.englishstudyservice.repos.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

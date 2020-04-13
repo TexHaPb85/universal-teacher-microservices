@@ -1,7 +1,7 @@
 package edu.practice.englishstudyservice.controllers.simple;
 
-import edu.practice.englishstudyservice.entities.RegistrationForm;
-import edu.practice.englishstudyservice.entities.User;
+import edu.practice.englishstudyservice.domain.RegistrationForm;
+import edu.practice.englishstudyservice.domain.User;
 import edu.practice.englishstudyservice.repos.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;

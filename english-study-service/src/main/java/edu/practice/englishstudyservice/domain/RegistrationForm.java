@@ -1,4 +1,4 @@
-package edu.practice.englishstudyservice.entities;
+package edu.practice.englishstudyservice.domain;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 

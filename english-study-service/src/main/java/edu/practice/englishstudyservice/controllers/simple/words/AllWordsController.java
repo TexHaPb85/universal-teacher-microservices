@@ -1,7 +1,7 @@
-package edu.practice.englishstudyservice.controllers.simple;
+package edu.practice.englishstudyservice.controllers.simple.words;
 
-import edu.practice.englishstudyservice.entities.Example;
-import edu.practice.englishstudyservice.entities.Word;
+import edu.practice.englishstudyservice.domain.Example;
+import edu.practice.englishstudyservice.domain.Word;
 import edu.practice.englishstudyservice.services.WordService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,10 +11,10 @@ import java.util.List;
 
 @Controller
 @RequestMapping("words")
-public class WordController {
+public class AllWordsController {
     private final WordService wordService;
 
-    public WordController(WordService wordService) {
+    public AllWordsController(WordService wordService) {
         this.wordService = wordService;
     }
 
@@ -38,7 +38,9 @@ public class WordController {
     @GetMapping("/{word}")
     public String getWord(@PathVariable String word, Model model) {
         Word wordObj = wordService.getWordById(word);
-        model.addAttribute("word", wordObj);
+        model.addAttribute("word", wordObj.getWord());
+        model.addAttribute("translation", wordObj.getTranslation());
+        model.addAttribute("examples", wordObj.getExamples());
         model.addAttribute("example", new Example());
         return "word.html";
     }

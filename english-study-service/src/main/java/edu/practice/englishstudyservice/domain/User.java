@@ -1,4 +1,4 @@
-package edu.practice.englishstudyservice.entities;
+package edu.practice.englishstudyservice.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

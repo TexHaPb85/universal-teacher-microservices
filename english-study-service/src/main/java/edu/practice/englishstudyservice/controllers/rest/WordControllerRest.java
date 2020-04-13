@@ -1,6 +1,6 @@
 package edu.practice.englishstudyservice.controllers.rest;
 
-import edu.practice.englishstudyservice.entities.Word;
+import edu.practice.englishstudyservice.domain.Word;
 import edu.practice.englishstudyservice.services.WordService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
