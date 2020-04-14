@@ -1,9 +1,17 @@
-package edu.practice.englishstudyservice.domain;
+package edu.practice.englishstudyservice.domain.serving;
 
+import edu.practice.englishstudyservice.domain.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 public class RegistrationForm {
+    @NotBlank(message = "username is not specified")
+    @Size(min = 3, max = 15, message = "Username must contain at least 3 and at most 15 characters")
     private String username;
+    @NotBlank(message = "password is not specified")
+    @Size(min = 3, max = 15, message = "Password must contain at least 3 and at most 15 characters")
     private String password;
     private String phone;
 

@@ -24,14 +24,17 @@ public class SingleWordController {
         model.addAttribute("word", wordObj.getWord());
         model.addAttribute("translation", wordObj.getTranslation());
         model.addAttribute("examples", wordObj.getExamples());
+
         model.addAttribute("example", new Example());
+
         return "word.html";
     }
 
     @PostMapping("/{word}")
     public String addExample(@PathVariable String word, @ModelAttribute Example example) {
-        System.out.println(example);
+        log.info("example: " + example + ", will be transmitted to service level");
         wordService.addExampleToWord(word, example);
+
         return "redirect:/words/" + word;
     }
 }

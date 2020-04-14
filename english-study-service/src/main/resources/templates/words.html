@@ -11,7 +11,7 @@
 <body>
 <div>
     <h3>Words for studying:</h3>
-    <table border="1">
+    <table border="1" th:object="${action}">
         <tr>
             <th>Word</th>
             <th>Translation</th>
@@ -25,7 +25,7 @@
             <td th:utext="${word.getTranslation()}">...</td>
             <td th:utext="${word.getExamples()}">...</td>
             <td><a th:href="@{'words/' + ${word.getWord()}}">edit</a></td>
-            <td><input name="words" type="checkbox" th:value="${word.getWord()}" /></td>
+            <td><input name="markedWords" type="checkbox" th:value="${word.getWord()}" /></td>
         </tr>
     </table>
 </div>

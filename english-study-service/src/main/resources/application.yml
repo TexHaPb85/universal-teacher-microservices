@@ -15,7 +15,7 @@ spring:
   h2:
     console:
         path: /h2
-        enabled: true
+        enabled: false
   flyway:
     enabled: true
 

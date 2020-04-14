@@ -5,17 +5,24 @@
     <title>English Teacher</title>
 </head>
 <body>
-<h1>Register</h1>
-<form method="POST" th:action="@{/register}" id="registerForm">
-    <label for="username">Username: </label>
-    <input type="text" name="username"/><br/>
-    <label for="password">Password: </label>
-    <input type="password" name="password"/><br/>
-    <label for="confirm">Confirm password: </label>
-    <input type="password" name="confirm"/><br/>
-    <label for="phone">Phone: </label>
-    <input type="text" name="phone"/><br/>
-    <input type="submit" value="Register"/>
-</form>
+    <h1>Register</h1>
+    <form method="POST" th:action="@{/register}" th:object="${formReg}" id="registerForm">
+        <label for="username">Username: </label>
+        <input type="text" th:field="*{username}"/><br/>
+        <span class="validationError"
+              th:if="${#fields.hasErrors('username')}"
+              th:errors="*{username}">username filling error</span>
+
+        <label for="password">Password: </label>
+        <input type="password" th:field="*{password}"/><br/>
+        <span class="validationError"
+              th:if="${#fields.hasErrors('password')}"
+              th:errors="*{password}">password filling error</span>
+
+        <label for="phone">Phone: </label>
+        <input type="text" th:field="*{phone}"/><br/>
+
+        <input type="submit" value="Register"/>
+    </form>
 </body>
 </html>
