@@ -27,16 +27,16 @@ public class User implements UserDetails {
 
     private String resetPasswordKey;
 
-    private Set<Authorities> authorities = new HashSet<>();
+    //private Set<Authorities> authorities = new HashSet<>();
 
-    public User(String id, String username, String password, boolean activated, String activationKey, String resetPasswordKey, Set<Authorities> authorities) {
+    public User(String id, String username, String password, boolean activated, String activationKey, String resetPasswordKey) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.activated = activated;
         this.activationKey = activationKey;
         this.resetPasswordKey = resetPasswordKey;
-        this.authorities = authorities;
+        //this.authorities = authorities;
     }
 
     public User() {
@@ -53,7 +53,7 @@ public class User implements UserDetails {
 
     @Override
     public List<GrantedAuthority> getAuthorities() {
-        return new ArrayList<>(authorities);
+        return List.of(Authorities.ROLE_USER);
     }
 
     @Override
@@ -96,7 +96,7 @@ public class User implements UserDetails {
     }
 
 
-    public void setAuthorities(Set<Authorities> authorities) {
-        this.authorities = authorities;
-    }
+//    public void setAuthorities(Set<Authorities> authorities) {
+//        this.authorities = authorities;
+//    }
 }

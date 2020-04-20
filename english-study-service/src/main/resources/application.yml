@@ -19,3 +19,6 @@ spring:
   flyway:
     enabled: true
 
+  thymeleaf:
+    cache: false
+

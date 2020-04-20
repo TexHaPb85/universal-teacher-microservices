@@ -1,7 +1,6 @@
 package edu.practice.authservice.config;
 
 
-
 import edu.practice.authservice.service.AuthClientDetailsService;
 import edu.practice.authservice.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +15,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenStore;
+import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 
 /**
  * The @EnableAuthorizationServer enables an AuthorizationEndpoint
@@ -48,15 +48,15 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
         clients.withClientDetails(authClientDetailsService);
     }
 
-    /*@Bean
+    @Bean
     public TokenStore tokenStore() {
-        return new MongoTokenStore();
-    }*/
+        return new InMemoryTokenStore(); // replace for new DB
+    }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints
-                //.tokenStore(tokenStore())
+                .tokenStore(tokenStore())
                 .authenticationManager(authenticationManager)
                 .userDetailsService(userDetailsService);
     }
@@ -69,5 +69,4 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
                 .passwordEncoder(encoder)
                 .allowFormAuthenticationForClients();
     }
-
 }

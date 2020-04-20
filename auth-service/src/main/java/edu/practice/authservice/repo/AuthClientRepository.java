@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface AuthClientRepository extends JpaRepository<AuthClientRepository,String> {
-    Optional<AuthClientDetails> findByClientId(String clientId);
+public interface AuthClientRepository extends JpaRepository<AuthClientDetails,String> {
+    Optional<AuthClientDetails> findClientByClientId(String clientId);
 }
