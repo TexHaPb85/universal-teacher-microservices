@@ -1,5 +1,5 @@
 server:
-  port: 9005
+  port: 9001
 
 spring:
   datasource:
@@ -14,8 +14,8 @@ spring:
     show-sql: true
   h2:
     console:
-        path: /h2
-        enabled: false
+      path: /h2
+      enabled: true
   flyway:
     enabled: true
 

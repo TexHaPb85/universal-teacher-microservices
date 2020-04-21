@@ -17,10 +17,21 @@ public class Example implements Serializable {
     @JsonIgnore
     private Word word;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "irr_verb_id")
+    @JsonIgnore
+    private IrregularVerb irregularVerb;
+
     public Example(String sentence, String translation, Word word) {
         this.sentence = sentence;
         this.translation = translation;
         this.word = word;
+    }
+
+    public Example(String sentence, String translation, IrregularVerb irregularVerb) {
+        this.sentence = sentence;
+        this.translation = translation;
+        this.irregularVerb = irregularVerb;
     }
 
     public Example() {

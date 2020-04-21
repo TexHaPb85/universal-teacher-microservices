@@ -22,6 +22,11 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
  * and a TokenEndpoint exposing endpoints to be used to authentication and authorization.
  */
 @Configuration
+/**
+ * This annotation tells Spring Cloud that this service will be used as an OAuth2 service
+ * and to add several REST-based endpoints that will be used in the OAuth2
+ * authentication and authorization processes
+ */
 @EnableAuthorizationServer
 public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 
@@ -29,11 +34,6 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
 
-    /**
-     * We defined our AuthClientDetailsService implementation to be used,
-     * as well a custom TokenStore implementation to make use of MongoDB to store the generated tokens.
-     * I want you to check the implementation of MongoTokenStore here, as well as MongoConfig and MongoProperties, I won’t put them here because it will become messy.
-     */
     @Autowired
     private CustomUserDetailsService userDetailsService;
 
