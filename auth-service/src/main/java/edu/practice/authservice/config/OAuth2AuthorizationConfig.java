@@ -48,11 +48,6 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
         clients.withClientDetails(authClientDetailsService);
     }
 
-    @Bean
-    public TokenStore tokenStore() {
-        return new InMemoryTokenStore(); // replace for new DB
-    }
-
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints
@@ -68,5 +63,10 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
                 .checkTokenAccess("isAuthenticated()")
                 .passwordEncoder(encoder)
                 .allowFormAuthenticationForClients();
+    }
+
+    @Bean
+    public TokenStore tokenStore() {
+        return new InMemoryTokenStore(); // replace for new DB
     }
 }

@@ -16,15 +16,10 @@ import java.util.Set;
 public class User implements UserDetails {
     @Id
     private String id;
-
     private String username;
-
     private String password;
-
     private boolean activated;
-
     private String activationKey;
-
     private String resetPasswordKey;
 
     //private Set<Authorities> authorities = new HashSet<>();

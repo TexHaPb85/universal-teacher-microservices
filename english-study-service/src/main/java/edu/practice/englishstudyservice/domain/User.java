@@ -1,3 +1,4 @@
+/*
 package edu.practice.englishstudyservice.domain;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -97,3 +98,4 @@ public class User implements UserDetails {
                 '}';
     }
 }
+*/

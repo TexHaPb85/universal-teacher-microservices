@@ -13,23 +13,14 @@ public class AuthClientDetails implements ClientDetails {
 
     @Id
     private String id;
-
     private String clientId;
-
     private String clientSecret;
-
     private String grantTypes;
-
     private String scopes;
-
     private String resources;
-
     private String redirectUris;
-
     private Integer accessTokenValidity;
-
     private Integer refreshTokenValidity;
-
     private String additionalInformation;
 
     public AuthClientDetails() {
