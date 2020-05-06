@@ -2,32 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16796f36-8383-46ff-841f-75405aced7da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/OAuth2AuthorizationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/OAuth2AuthorizationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/domain/AuthClientDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/domain/AuthClientDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/service/AuthClientDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/service/AuthClientDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/shared/english-study-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/shared/english-study-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/english-study-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/configuration/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/configuration/WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/controllers/rest/UserControllerRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/controllers/rest/UserControllerRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/controllers/simple/RegistrationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/controllers/simple/words/AllWordsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/controllers/simple/words/SingleWordController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/domain/serving/Action.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/domain/serving/RegistrationForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/repos/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/repos/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/services/UserDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/english-study-service/src/main/java/edu/practice/englishstudyservice/services/UserDetailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/resources/static/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/resources/static/images/logotype.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/resources/static/task.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/resources/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/resources/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/resources/templates/registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/resources/templates/word.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/main/resources/templates/words.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/test/java/edu/practice/authservice/AuthServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/src/main/java/edu/practice/configservice/ConfigServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/java/edu/practice/configservice/ConfigServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/shared/auth-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/shared/auth-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/english-study-service/src/test/java/edu/practice/englishstudyservice/ReflectionApiTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +84,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/english-study-service/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config-service/src/main/resources" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -115,11 +105,11 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\universal-teacher-microservices\config-service\src\main\resources" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\templates" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\templates\images" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\java\edu\practice" />
-      <recent name="E:\universal-teacher-microservices\auth-service\src\main\java\edu\practice\authservice" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -139,7 +129,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProgrammingStudyServiceApplication">
+  <component name="RunManager" selected="JUnit.EnterEntryToDBTest.addClient">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -152,7 +142,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthServiceApplicationTests.switchCaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EnterEntryToDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <extension name="coverage">
         <pattern>
@@ -161,15 +151,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.practice.authservice" />
-      <option name="MAIN_CLASS_NAME" value="edu.practice.authservice.AuthServiceApplicationTests" />
-      <option name="METHOD_NAME" value="switchCaseTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="edu.practice.authservice.EnterEntryToDBTest" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthServiceApplicationTests.tryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EnterEntryToDBTest.addClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <extension name="coverage">
         <pattern>
@@ -178,25 +167,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="edu.practice.authservice" />
-      <option name="MAIN_CLASS_NAME" value="edu.practice.authservice.AuthServiceApplicationTests" />
-      <option name="METHOD_NAME" value="tryTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.practice.authservice.EnterEntryToDBTest" />
+      <option name="METHOD_NAME" value="addClient" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EnglishStudyServiceApplicationTests.saveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="english-study-service" />
+    <configuration name="EnterEntryToDBTest.uTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.practice.englishstudyservice.*" />
+          <option name="PATTERN" value="edu.practice.authservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="edu.practice.englishstudyservice" />
-      <option name="MAIN_CLASS_NAME" value="edu.practice.englishstudyservice.EnglishStudyServiceApplicationTests" />
-      <option name="METHOD_NAME" value="saveTest" />
+      <option name="PACKAGE_NAME" value="edu.practice.authservice" />
+      <option name="MAIN_CLASS_NAME" value="edu.practice.authservice.EnterEntryToDBTest" />
+      <option name="METHOD_NAME" value="uTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -250,23 +239,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CofigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="config-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.practice.configservice.ConfigServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="config-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="edu.practice.configservice.ConfigServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="demo" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -288,13 +263,6 @@
     <configuration name="ProgrammingStudyServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="programming-study-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="edu.practice.programmingstudyservice.ProgrammingStudyServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistriServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="registri-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.practice.registriservice.RegistriServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -326,11 +294,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EnterEntryToDBTest.addClient" />
+        <item itemvalue="JUnit.EnterEntryToDBTest" />
+        <item itemvalue="JUnit.EnterEntryToDBTest.uTest" />
         <item itemvalue="JUnit.ReflectionApiTest.test" />
         <item itemvalue="JUnit.HomeControllerTest" />
-        <item itemvalue="JUnit.EnglishStudyServiceApplicationTests.saveTest" />
-        <item itemvalue="JUnit.AuthServiceApplicationTests.switchCaseTest" />
-        <item itemvalue="JUnit.AuthServiceApplicationTests.tryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -342,7 +310,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3946e54" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bafb5421" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bafb5421" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@771b8af7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -369,7 +342,15 @@
       <workItem from="1586468921693" duration="30317000" />
       <workItem from="1586722069393" duration="22440000" />
       <workItem from="1587031993028" duration="2983000" />
-      <workItem from="1587376722257" duration="44929000" />
+      <workItem from="1587376722257" duration="50120000" />
+      <workItem from="1587894514973" duration="660000" />
+      <workItem from="1587896878263" duration="60000" />
+      <workItem from="1587903100678" duration="131000" />
+      <workItem from="1588428818566" duration="591000" />
+      <workItem from="1588440150070" duration="6741000" />
+      <workItem from="1588625228157" duration="3702000" />
+      <workItem from="1588679914335" duration="5264000" />
+      <workItem from="1588758130839" duration="1209000" />
     </task>
     <servers />
   </component>

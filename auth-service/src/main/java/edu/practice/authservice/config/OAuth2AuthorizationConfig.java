@@ -30,18 +30,20 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 @EnableAuthorizationServer
 public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 
-    @Autowired
-    @Qualifier("authenticationManagerBean")
-    private AuthenticationManager authenticationManager;
+    private final AuthenticationManager authenticationManager;
 
-    @Autowired
-    private CustomUserDetailsService userDetailsService;
+    private final CustomUserDetailsService userDetailsService;
 
-    @Autowired
-    private AuthClientDetailsService authClientDetailsService;
+    private final AuthClientDetailsService authClientDetailsService;
 
-    @Autowired
-    private PasswordEncoder encoder;
+    private final PasswordEncoder encoder;
+
+    public OAuth2AuthorizationConfig(@Qualifier("authenticationManagerBean") AuthenticationManager authenticationManager, CustomUserDetailsService userDetailsService, AuthClientDetailsService authClientDetailsService, PasswordEncoder encoder) {
+        this.authenticationManager = authenticationManager;
+        this.userDetailsService = userDetailsService;
+        this.authClientDetailsService = authClientDetailsService;
+        this.encoder = encoder;
+    }
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {

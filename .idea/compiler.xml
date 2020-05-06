@@ -8,9 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gateway-service" />
         <module name="registry-service" />
-        <module name="auth-service" />
-        <module name="programming-study-service" />
         <module name="english-study-service" />
+        <module name="config-service" />
+        <module name="programming-study-service" />
+        <module name="auth-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

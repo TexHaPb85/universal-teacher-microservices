@@ -172,4 +172,20 @@ public class AuthClientDetails implements ClientDetails {
     public void setAdditionalInformation(String additionalInformation) {
         this.additionalInformation = additionalInformation;
     }
+
+    @Override
+    public String toString() {
+        return "AuthClientDetails{" +
+                "id='" + id + '\'' +
+                ", clientId='" + clientId + '\'' +
+                ", clientSecret='" + clientSecret + '\'' +
+                ", grantTypes='" + grantTypes + '\'' +
+                ", scopes='" + scopes + '\'' +
+                ", resources='" + resources + '\'' +
+                ", redirectUris='" + redirectUris + '\'' +
+                ", accessTokenValidity=" + accessTokenValidity +
+                ", refreshTokenValidity=" + refreshTokenValidity +
+                ", additionalInformation='" + additionalInformation + '\'' +
+                '}';
+    }
 }

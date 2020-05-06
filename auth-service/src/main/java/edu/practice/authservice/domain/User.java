@@ -37,6 +37,14 @@ public class User implements UserDetails {
     public User() {
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     @Override
     public String getUsername() {
         return username;
@@ -94,4 +102,17 @@ public class User implements UserDetails {
 //    public void setAuthorities(Set<Authorities> authorities) {
 //        this.authorities = authorities;
 //    }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", activated=" + activated +
+                ", activationKey='" + activationKey + '\'' +
+                ", resetPasswordKey='" + resetPasswordKey + '\'' +
+                '}';
+    }
 }
