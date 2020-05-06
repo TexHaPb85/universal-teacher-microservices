@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16796f36-8383-46ff-841f-75405aced7da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/OAuth2AuthorizationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/OAuth2AuthorizationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/domain/AuthClientDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/domain/AuthClientDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/service/AuthClientDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/service/AuthClientDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/test/java/edu/practice/authservice/AuthServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/src/main/java/edu/practice/configservice/ConfigServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/java/edu/practice/configservice/ConfigServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-service/src/main/resources/shared/auth-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-service/src/main/resources/shared/auth-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/english-study-service/src/test/java/edu/practice/englishstudyservice/ReflectionApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/MongoBeeConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/MongoBeeConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/MongoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/MongoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/MongoProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/MongoProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/MongoTokenStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/MongoTokenStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/domein/MongoAccessToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/domein/MongoAccessToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/domein/MongoRefreshToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/domein/MongoRefreshToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/test/java/edu/practice/authservice/EnterEntryToDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/test/java/edu/practice/authservice/EnterEntryToDBTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,21 +88,21 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="edu.practice.englishstudyservice.controllers" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\static" />
-      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\backup" />
-      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\db\migration" />
-      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\java\edu\practice" />
-      <recent name="E:\universal-teacher-microservices\auth-service\src\main\java\edu\practice\authservice\config\mongoDB\domein" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\universal-teacher-microservices\config-service\src\main\resources" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\templates" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\templates\images" />
+      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\java\edu\practice" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\universal-teacher-microservices\auth-service\excluded" />
+      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\static" />
+      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\backup" />
+      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\db\migration" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\java\edu\practice" />
     </key>
   </component>
@@ -129,7 +123,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EnterEntryToDBTest.addClient">
+  <component name="RunManager" selected="JUnit.EnterEntryToDBTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -294,8 +288,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EnterEntryToDBTest.addClient" />
         <item itemvalue="JUnit.EnterEntryToDBTest" />
+        <item itemvalue="JUnit.EnterEntryToDBTest.addClient" />
         <item itemvalue="JUnit.EnterEntryToDBTest.uTest" />
         <item itemvalue="JUnit.ReflectionApiTest.test" />
         <item itemvalue="JUnit.HomeControllerTest" />
@@ -305,17 +299,27 @@
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
-        <option name="contentProportion" value="0.22351122" />
+        <option name="contentProportion" value="0.25908738" />
         <treeState>
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bafb5421" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@598e2efb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bafb5421" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@771b8af7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@598e2efb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@778abda" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@598e2efb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8a27446c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@598e2efb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@676858d2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />

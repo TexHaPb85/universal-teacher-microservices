@@ -19,7 +19,7 @@ public class EnterEntryToDBTest {
     @Autowired
     private UserRepository userRepository;
 
-    @Test
+    //@Test
     public void addClient(){
         AuthClientDetails clientDetails = new AuthClientDetails();
         clientDetails.setId("english-study-service");
