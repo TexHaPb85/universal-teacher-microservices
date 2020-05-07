@@ -1,0 +1,14 @@
+:root{
+  --maincolor:#558D76;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-family: 'Source Sans Pro', sans-serif;
+}

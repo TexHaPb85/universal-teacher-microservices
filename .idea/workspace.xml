@@ -1,19 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16796f36-8383-46ff-841f-75405aced7da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="7d878e72-6b71-41bb-8482-04364f7b1c49" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/actions/personActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Courses/AllCourses.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Courses/Courses.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Courses/MyCourses.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Homepage/HomePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Mainpage/Backdrop.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Mainpage/Content.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Mainpage/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Mainpage/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Mainpage/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Mainpage/Login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Mainpage/MainPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Mainpage/Reviews.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/components/Mainpage/Slider.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/css/backdrop.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/css/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/css/courses.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/css/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/css/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/css/homePage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/content-carousel/englishImg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/content-carousel/javaImg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/content-carousel/mathImg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/footer/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/footer/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/login/exitIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/login/googleAuth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/logotype.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/slider/home1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/slider/home2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/imgs/slider/home3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/localStorage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/services/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/src/store/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-service/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/MongoBeeConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/MongoBeeConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/MongoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/MongoConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/MongoProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/MongoProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/MongoTokenStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/MongoTokenStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/domein/MongoAccessToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/domein/MongoAccessToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/edu/practice/authservice/config/mongoDB/domein/MongoRefreshToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/excluded/mongoDB/domein/MongoRefreshToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/test/java/edu/practice/authservice/EnterEntryToDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/test/java/edu/practice/authservice/EnterEntryToDBTest.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,9 +82,6 @@
     <expand />
     <select />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="universal-teacher-microservices" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -49,22 +95,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="E:\universal-teacher-microservices\.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1ZlEeVVfNdX3E5OnZMaSoaDI15D" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="h2" />
@@ -88,21 +124,21 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="edu.practice.englishstudyservice.controllers" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\universal-teacher-microservices\config-service\src\main\resources" />
-      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources" />
-      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\templates" />
-      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\templates\images" />
-      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\java\edu\practice" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\universal-teacher-microservices\auth-service\excluded" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\static" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\backup" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\db\migration" />
+      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\java\edu\practice" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\universal-teacher-microservices\config-service\src\main\resources" />
+      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources" />
+      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\templates" />
+      <recent name="E:\universal-teacher-microservices\english-study-service\src\main\resources\templates\images" />
       <recent name="E:\universal-teacher-microservices\english-study-service\src\main\java\edu\practice" />
     </key>
   </component>
@@ -111,16 +147,6 @@
       <set>
         <option value="SpringBootApplicationConfigurationType" />
       </set>
-    </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
     </option>
   </component>
   <component name="RunManager" selected="JUnit.EnterEntryToDBTest">
@@ -296,37 +322,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <option name="contentProportion" value="0.25908738" />
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@598e2efb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@598e2efb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@778abda" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@598e2efb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8a27446c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@598e2efb" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@676858d2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -366,12 +361,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
