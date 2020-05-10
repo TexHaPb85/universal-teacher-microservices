@@ -1,34 +1,42 @@
 
 const initialState = {
     persons: {},
-    isLogged: false,
+    lesson:{},
+    isLogged: true,
     creating: false,
 };
 
 const reducer = (state = initialState, action) => {
 
     if (action.type === "FETCH_START") {
-        window.open("http://localhost:8081/login");
+        // window.open("http://localhost:8081/login");
         return {...state}
     }
     if (action.type === "FETCH_START1") {
 
         return {...state}
     }
+
+    if (action.type === "GET_TEST") {
+        // console.log(action.payload);
+       state.lesson = action.payload;
+       console.log(state.lesson);
+        return {...state}
+    }
     if (action.type === "loginData") {
-        state.persons = action.payload;
-        console.log(action.payload);
-        if (state.persons === null) {
-
-            state.isLogged = false
-        } else if (state.persons !== undefined) {
-
-            state.isLogged = true;
-                state.creating = false;
-        }
-
-        console.log(state.isLogged);
-        console.log(state);
+        // state.persons = action.payload;
+        // console.log(action.payload);
+        // if (state.persons === null) {
+        //
+        //     state.isLogged = false
+        // } else if (state.persons !== undefined) {
+        //
+        //     state.isLogged = true;
+        //         state.creating = false;
+        // }
+        //
+        // console.log(state.isLogged);
+        // console.log(state);
         return {...state};
     }
     if (action.type === "deadData") {

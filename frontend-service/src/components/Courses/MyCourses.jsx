@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
 import "../../css/courses.css"
 import {connect} from "react-redux";
+import {testContent} from "../../actions/personActions"
 import {NavLink, withRouter} from "react-router-dom";
+import {loginData} from "../../actions/personActions";
+import {bindActionCreators} from "redux";
 
 class MyCourses extends Component {
 
+    componentWillMount() {
+
+        this.props.testData(testContent());
+    }
     render() {
 
         return (
@@ -25,7 +32,9 @@ class MyCourses extends Component {
 
 const mapDispatchToProps = (dispatch) => {
 
-    return {}
+    return {
+        testData: bindActionCreators(testContent, dispatch),
+    }
 
 };
 const mapStateToProps = (state) => {
@@ -33,8 +42,8 @@ const mapStateToProps = (state) => {
 
     return {
         persons: state.persons,
-        auth: state.isLogged
-
+        auth: state.isLogged,
+        lesson : state.lesson
 
     }
 };

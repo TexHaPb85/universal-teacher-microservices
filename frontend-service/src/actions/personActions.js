@@ -4,26 +4,40 @@ import login from "../services/login"
 export const googleAuth = () => {
     return function (dispatch) {
         dispatch({type: "FETCH_START"});
-        login.googleAuth().then((res) => dispatch({
-            type: "loginData",
-            payload: res.data.profile
-        })).catch((response) => dispatch({
-            type: "deadData",
-            error: response.error
-        }))
+        // login.googleAuth().then((res) => dispatch({
+        //     type: "loginData",
+        //     // payload: res.data.profile
+        // })).catch((response) => dispatch({
+        //     type: "deadData",
+        //     error: response.error
+        // }))
+    }};
 
-    }
-};
+export const testContent =() =>{
+    return function (dispatch){
+        dispatch({type:"GET_TEST"});
+        login.testFetch().then((res)=>dispatch({
+            type:"GET_TEST",
+            payload : res.data}))
+            .catch((response) => dispatch({
+                type: "deadData",
+                error: response.error
+            }))
+    }};
+
+
+
+
 export const loginData = () => {
     return function (dispatch) {
-        dispatch({type: "FETCH_START1"});
-        login.googleAuth().then((res) => dispatch({
-            type: "loginData",
-            payload: res.data.profile
-        })).catch((response) => dispatch({
-            type: "deadData",
-            error: response.error
-        }))
+        // dispatch({type: "FETCH_START1"});
+        // login.googleAuth().then((res) => dispatch({
+        //     type: "loginData",
+        //     // payload: res.data.profile
+        // })).catch((response) => dispatch({
+        //     type: "deadData",
+        //     error: response.error
+        // }))
 
     }
 };

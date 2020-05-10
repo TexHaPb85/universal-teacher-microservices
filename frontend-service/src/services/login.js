@@ -7,6 +7,20 @@ import axios from 'axios'
 class Login {
 
 
+    testFetch(){
+        return axios.get(`${'http://localhost:9001/irregular-verbs-train'}`
+        //     , {
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Access-Control-Allow-Origin': '*',
+        //         'withCredentials' : 'true',
+        //         'credentials' : 'same-origin',
+        //
+        //
+        //     },withCredentials:true, credentials: "same-origin"
+        // }
+        )
+    }
 
 
     googleAuth() {
