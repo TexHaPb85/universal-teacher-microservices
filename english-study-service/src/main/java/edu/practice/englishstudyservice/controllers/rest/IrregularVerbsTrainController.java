@@ -27,11 +27,11 @@ public class IrregularVerbsTrainController {
                 .body(irrVerbService.getIrrVerbs());
     }
 
-    @GetMapping("{wordInf}")
-    public ResponseEntity<IrregularVerb> getVerb(@PathVariable String wordInf){
+    @GetMapping("{wordInfinitive}")
+    public ResponseEntity<IrregularVerb> getVerb(@PathVariable String wordInfinitive){
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(irrVerbService.findVerbByInfinitive(wordInf));
+                .body(irrVerbService.findVerbByInfinitive(wordInfinitive));
     }
 
     @GetMapping("rand")
