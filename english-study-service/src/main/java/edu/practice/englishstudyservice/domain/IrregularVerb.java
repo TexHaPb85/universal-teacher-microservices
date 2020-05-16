@@ -1,13 +1,15 @@
 package edu.practice.englishstudyservice.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "irregular_verbs")
 public class IrregularVerb {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     private String infinitive;
     private String pastSimple;
     private String pastParticiple;
@@ -16,14 +18,16 @@ public class IrregularVerb {
     @OneToMany(mappedBy="irregularVerb")
     private List<Example> examples;
 
-    public IrregularVerb(String infinitive, String pastSimple, String pastParticiple, String translation) {
-        this.infinitive = infinitive;
-        this.pastSimple = pastSimple;
-        this.pastParticiple = pastParticiple;
-        this.translation = translation;
-    }
 
     public IrregularVerb() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getInfinitive() {

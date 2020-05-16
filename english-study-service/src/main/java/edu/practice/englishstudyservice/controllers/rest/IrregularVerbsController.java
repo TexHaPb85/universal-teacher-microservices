@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("irregular-verbs-train")
-public class IrregularVerbsTrainController {
+@RequestMapping("irregular-verbs")
+public class IrregularVerbsController {
     private final IrregularVerbService irrVerbService;
 
-    public IrregularVerbsTrainController(IrregularVerbService irrVerbService) {
+    public IrregularVerbsController(IrregularVerbService irrVerbService) {
         this.irrVerbService = irrVerbService;
     }
 
@@ -27,20 +27,17 @@ public class IrregularVerbsTrainController {
                 .body(irrVerbService.getIrrVerbs());
     }
 
-    @GetMapping("{wordInfinitive}")
+    @GetMapping("/train/")
+    public ResponseEntity<IrregularVerb> getRandomVerb(){
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(irrVerbService.getRandomVerb());
+    }
+
+    @GetMapping("/train/{wordInfinitive}")
     public ResponseEntity<IrregularVerb> getVerb(@PathVariable String wordInfinitive){
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(irrVerbService.findVerbByInfinitive(wordInfinitive));
-    }
-
-    @GetMapping("rand")
-    public ResponseEntity<IrregularVerb> getRandomVerb(){
-        List<IrregularVerb> verbs = irrVerbService.getIrrVerbs();
-        int randElementIndex = (int) (Math.random()*verbs.size());
-
-        return ResponseEntity
-                .status(HttpStatus.OK)
-                .body(verbs.get(randElementIndex));
+                .body(irrVerbService.getVerbByInfinitive(wordInfinitive));
     }
 }
