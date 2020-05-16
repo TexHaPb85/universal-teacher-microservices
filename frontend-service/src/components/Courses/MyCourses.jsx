@@ -5,6 +5,7 @@ import {testContent} from "../../actions/personActions"
 import {NavLink, withRouter} from "react-router-dom";
 import {loginData} from "../../actions/personActions";
 import {bindActionCreators} from "redux";
+import CoursesNavigation from "./CoursesNavigation";
 
 class MyCourses extends Component {
 
@@ -16,14 +17,9 @@ class MyCourses extends Component {
 
         return (
             <section className={"all-courses"}>
-                <h1>Курсы</h1>
-                    <ul className={"courses-menu"}>
-                        <li><NavLink to={"/courses"}>Все курсы</NavLink></li>
-                        <li><NavLink replace={window.location.pathname === "/courses/my-courses"}  to={"/courses/my-courses"}>Мои курсы</NavLink></li>
 
 
-                    </ul>
-                <h1>LULULLULUL</h1>
+                <h1>MYCOURSES</h1>
             </section>
         )
     }

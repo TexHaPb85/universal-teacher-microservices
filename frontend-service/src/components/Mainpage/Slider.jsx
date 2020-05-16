@@ -30,7 +30,7 @@ function Slider ()
     >
         <div className="carousel-cell"><img src={Image1}/>
 
-              <Link className={"link-cell"} to={"/"}>
+              <Link className={"link-cell"} to={"/english"}>
                   <h2> Английский</h2>
                   <p>В этом курсе вам раскажут как прожить и многое другое</p>
               </Link>

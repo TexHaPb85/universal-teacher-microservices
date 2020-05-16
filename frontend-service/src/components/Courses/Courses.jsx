@@ -1,18 +1,23 @@
 import React, {Component} from 'react';
-import {NavLink, Route, withRouter} from "react-router-dom";
+import {Link, NavLink, Route, withRouter} from "react-router-dom";
 import "../../css/courses.css"
 import {connect} from "react-redux";
+import Image2 from "../../imgs/content-carousel/javaImg.jpg";
+import Flickity from "react-flickity-component";
+import Image1 from "../../imgs/content-carousel/englishImg.jpg";
+import CoursesNavigation from "./CoursesNavigation";
+
 
 class Courses extends Component {
-    constructor (props){
-        super(props);
-        this.state ={
-            bool : false
-        }
-
-        this.XD = this.XD.bind(this);
-
-    }
+    // constructor (props){
+    //     super(props);
+    //     this.state ={
+    //         bool : false
+    //     }
+    //
+    //     this.XD = this.XD.bind(this);
+    //
+    // }
     XD (){
         if(window.location.pathname === "/courses/my-courses"){
           return "replace={true}"
@@ -42,12 +47,23 @@ class Courses extends Component {
 
                 <section className={"courses"}>
                     <h1>Курсы</h1>
-                    <ul className={"courses-menu"}>
-                        <li><NavLink  onClick={this.XD} replace={window.location.pathname === "/courses"} to={"/courses"}>Все курсы</NavLink></li>
-                        <li><NavLink replace={window.location.pathname === "/courses/my-courses"} to={"/courses/my-courses"}>Мои курсы</NavLink></li>
+                    <CoursesNavigation/>
+                    <div className="courses-flex">
+                    <div className="carousel-cell"><img src={Image1}/>
+                        <Link className={"link-cell"} to={"/english"}>
+                            <h2> Английский</h2>
+                            <p>В этом курсе вам раскажут как прожить и многое другое</p>
+                        </Link>
 
+                    </div>
+                    <div className="carousel-cell"><img src={Image2}/>
+                        <Link className={"link-cell"} to={"/"}>
+                            <h2> Программирование</h2>
+                            <p>В этом курсе вам раскажут как прожить и многое другое</p>
+                        </Link>
 
-                    </ul>
+                    </div>
+                    </div>
                 </section>
 
 

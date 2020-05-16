@@ -1,16 +1,24 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Route, Switch, withRouter} from "react-router-dom";
 import "../../css/courses.css"
 import {connect} from "react-redux";
+import {testContent} from "../../actions/personActions"
+import {NavLink, withRouter} from "react-router-dom";
+import {loginData} from "../../actions/personActions";
+import {bindActionCreators} from "redux";
+import CoursesNavigation from "./CoursesNavigation";
 
 class AllCourses extends Component {
 
+    componentWillMount() {
+
+        this.props.testData(testContent());
+    }
     render() {
 
         return (
-          <section className={"all-courses"}>
-        <h1>H1H1</h1>
-          </section>
+            <section className={"all-courses"}>
+                <h1>ALL-COURSES</h1>
+            </section>
         )
     }
 
@@ -18,7 +26,9 @@ class AllCourses extends Component {
 
 const mapDispatchToProps = (dispatch) => {
 
-    return {}
+    return {
+        testData: bindActionCreators(testContent, dispatch),
+    }
 
 };
 const mapStateToProps = (state) => {
@@ -26,10 +36,10 @@ const mapStateToProps = (state) => {
 
     return {
         persons: state.persons,
-        auth: state.isLogged
-
+        auth: state.isLogged,
+        lesson : state.lesson
 
     }
 };
 
-export default withRouter( connect(mapStateToProps, mapDispatchToProps)(AllCourses));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AllCourses));
