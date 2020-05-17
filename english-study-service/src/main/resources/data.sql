@@ -6,7 +6,7 @@ insert into noun_verbs values('1', 'лікар', 'doctor', 'лікувати');
 insert into noun_verbs values('2','коробка', 'box',  'оточувати');
 insert into noun_verbs values('3', 'копія','copy',  'копіювати');
 
-insert into phrasal_verbs values('1','give up', 'give', 'сдаваться');
-insert into phrasal_verbs values('2','give away', 'give', 'выдавать');
-insert into phrasal_verbs values('3','give over', 'give', 'преставать,бросать');
-insert into phrasal_verbs values('4','think over', 'think', 'обдумывать');
+insert into phrasal_verbs values('1','give up', 'сдаваться','give');
+insert into phrasal_verbs values('2','give away',  'выдавать', 'give');
+insert into phrasal_verbs values('3','give over', 'преставать,бросать', 'give');
+insert into phrasal_verbs values('4','think over',  'обдумывать', 'think');

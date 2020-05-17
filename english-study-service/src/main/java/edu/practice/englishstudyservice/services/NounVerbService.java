@@ -28,9 +28,7 @@ public class NounVerbService {
 
     public NounVerb getRandomNoun() {
         long verbCount = nounVerbRepository.count();
-        long id = random.nextInt((int) verbCount);
-        if(id<=0)
-            id=1;
+        long id = 1 + random.nextInt((int) verbCount);
 
         return nounVerbRepository
                 .findById(id)

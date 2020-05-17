@@ -33,9 +33,7 @@ public class PhrasalVerbsService {
     public PhrasalVerb getRandomPhrasalVerb(){
         long count = phrasalVerbRepository.count();
         Random random = new Random();
-        long id = random.nextInt((int) count);
-        if(id<0)
-            id=0;
+        long id = 1 + random.nextInt((int) count);
 
         return phrasalVerbRepository
                 .findById(id)

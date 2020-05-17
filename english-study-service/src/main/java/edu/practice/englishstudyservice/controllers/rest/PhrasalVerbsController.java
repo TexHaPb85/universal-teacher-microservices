@@ -3,15 +3,13 @@ package edu.practice.englishstudyservice.controllers.rest;
 import edu.practice.englishstudyservice.domain.PhrasalVerb;
 import edu.practice.englishstudyservice.services.PhrasalVerbsService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("phrasal-verbs")
+@CrossOrigin(origins="*")
 public class PhrasalVerbsController {
 
     private final PhrasalVerbsService phrasalVerbsService;
@@ -26,7 +24,7 @@ public class PhrasalVerbsController {
                 .ok(phrasalVerbsService.getAllOrderedByVerbs());
     }
 
-    @GetMapping("/train/")
+    @GetMapping("/train")
     public ResponseEntity<List<PhrasalVerb>> getVerbsByRandomVerb(){
         return ResponseEntity
                 .ok(phrasalVerbsService.getRandomPhrasalVerbs());

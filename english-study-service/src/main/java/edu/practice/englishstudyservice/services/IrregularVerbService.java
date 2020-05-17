@@ -34,8 +34,6 @@ public class IrregularVerbService {
     public IrregularVerb getRandomVerb() {
         long verbCount = verbRepository.count();
         long id = 1 + random.nextInt((int) verbCount);
-        if(id<=0)
-            id=1;
 
         return verbRepository
                 .findById(id)

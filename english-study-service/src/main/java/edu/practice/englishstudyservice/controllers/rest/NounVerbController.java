@@ -3,15 +3,13 @@ package edu.practice.englishstudyservice.controllers.rest;
 import edu.practice.englishstudyservice.domain.NounVerb;
 import edu.practice.englishstudyservice.services.NounVerbService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("noun-verbs")
+@CrossOrigin(origins="*")
 public class NounVerbController {
     private final NounVerbService nounVerbService;
 
@@ -25,7 +23,7 @@ public class NounVerbController {
                 .ok(nounVerbService.getAll());
     }
 
-    @GetMapping("/train/")
+    @GetMapping("/train")
     public ResponseEntity<NounVerb> getRandomNoun(){
         return ResponseEntity
                 .ok(nounVerbService.getRandomNoun());
