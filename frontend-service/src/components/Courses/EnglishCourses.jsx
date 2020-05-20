@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Route, Switch, withRouter} from "react-router-dom";
+import {BrowserRouter as Router, Link, NavLink, Route, Switch, withRouter} from "react-router-dom";
 import "../../css/courses.css"
 import {connect} from "react-redux";
 
@@ -8,9 +8,21 @@ class EnglishCourses extends Component {
     render() {
 
         return (
-            <section className={"all-courses"}>
+            <section className={"english-courses verbs"}>
                 <h1>Курсы англ</h1>
+                <div className={"english-tests"}>
+                <ul className={"english-list"}>
+                    <Link  to={"/english/irregular-verbs"}><li>Неправильні дієслова </li></Link>
+                   <Link  to={"/english/phrasal-verbs"}> <li>Фразові дієслова</li></Link>
+                   <Link  to={"/english/noun-verbs"}> <li>Іменні дієслова</li></Link>
 
+                </ul>
+                <ul className={"english-test-list"}>
+                    <Link  to={"/english/irregular-verbs/train"}><li>Тест по неправильним дієсловам</li> </Link>
+                   <Link  to={"/english/phrasal-verbs/train"}> <li>Тест по фразовим дієсловам</li></Link>
+                   <Link  to={"/english/noun-verbs/train"}> <li>Тест по іменним дієслова</li></Link>
+                </ul>
+                </div>
             </section>
         )
     }

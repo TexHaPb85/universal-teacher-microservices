@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "../../css/courses.css"
 import {connect} from "react-redux";
-import {testContent} from "../../actions/personActions"
+import {irregularVerbs} from "../../actions/personActions"
 import {NavLink, withRouter} from "react-router-dom";
 import {loginData} from "../../actions/personActions";
 import {bindActionCreators} from "redux";
@@ -11,15 +11,34 @@ class MyCourses extends Component {
 
     componentWillMount() {
 
-        this.props.testData(testContent());
+        if(Object.keys(this.props.lesson).length===0){
+        this.props.testData(irregularVerbs());}
+
     }
     render() {
 
         return (
             <section className={"all-courses"}>
-
-
                 <h1>MYCOURSES</h1>
+                <table>
+                    <tr>
+                        <th>Infinitive</th>
+                        <th>Past simple</th>
+                        <th>Past participle</th>
+                        <th>Translation</th>
+                    </tr>
+                    <td>{this.props.irVerbs.map(({infinitive}) =>
+                        <tr>{infinitive}</tr>)}</td>
+
+                    <td>{this.props.irVerbs.map(({pastSimple}) =>
+                        <tr>{pastSimple}</tr>)}</td>
+
+                    <td>{this.props.irVerbs.map(({pastParticiple}) =>
+                        <tr>{pastParticiple}</tr>)}</td>
+
+                    <td>{this.props.irVerbs.map(({translation}) =>
+                        <tr>{translation}</tr>)}</td>
+                </table>
             </section>
         )
     }
@@ -29,7 +48,7 @@ class MyCourses extends Component {
 const mapDispatchToProps = (dispatch) => {
 
     return {
-        testData: bindActionCreators(testContent, dispatch),
+        testData: bindActionCreators(irregularVerbs, dispatch),
     }
 
 };

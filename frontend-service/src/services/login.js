@@ -7,8 +7,8 @@ import axios from 'axios'
 class Login {
 
 
-    testFetch(){
-        return axios.get(`${'http://localhost:9001/irregular-verbs-train'}`
+    irregularFetch (){
+        return  axios.get(`${'http://localhost:9001/irregular-verbs'}`
         //     , {
         //     headers: {
         //         'Content-Type': 'application/json',
@@ -19,6 +19,31 @@ class Login {
         //
         //     },withCredentials:true, credentials: "same-origin"
         // }
+        )
+    }
+    phrasalFetch (){
+        return  axios.get(`${'http://localhost:9001/phrasal-verbs'}`
+
+        )
+    }
+    nounFetch (){
+        return  axios.get(`${'http://localhost:9001/noun-verbs'}`
+
+        )
+    }
+    irregularTrain(){
+        return axios.get(`${'http://localhost:9001/irregular-verbs/train'}`
+
+        )
+    }
+    phrasalTrain(){
+        return axios.get(`${'http://localhost:9001/phrasal-verbs/train'}`
+
+        )
+    }
+
+    nounTrain(){
+        return axios.get(`${'http://localhost:9001/noun-verbs/train'}`
         )
     }
 

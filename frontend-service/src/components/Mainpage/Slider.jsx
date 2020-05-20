@@ -32,13 +32,15 @@ function Slider ()
 
               <Link className={"link-cell"} to={"/english"}>
                   <h2> Английский</h2>
-                  <p>В этом курсе вам раскажут как прожить и многое другое</p>
+                  <p>В этом курсе вы научитесь уверенно разбирать техническую документацию и научитесь грамматике/лексике
+                      уровнем не ниже B2</p>
               </Link>
 
         </div>
         <div className="carousel-cell"><img src={Image2}/>
 
-                <Link className={"link-cell"} to={"/"}><h2>Программирование</h2></Link>
+                <Link className={"link-cell"} to={"/"}><h2>Программирование</h2>
+                    <p>В этом курсе вам раскажут как прожить и многое другое</p></Link>
 
         </div>
         <div className="carousel-cell"><img src={Image3}/>

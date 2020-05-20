@@ -16,7 +16,8 @@ const store = createStore(reducer,persistedState,applyMiddleware(thunk,createLog
 //
 // })
 store.subscribe( () =>{
-    localStorage.setItem('reduxState', JSON.stringify(store.getState()))
+    localStorage.setItem('reduxState', JSON.stringify(store.getState()));
+
     // localStorage.getItem("reduxState");
 
     // console.log(store.state)
