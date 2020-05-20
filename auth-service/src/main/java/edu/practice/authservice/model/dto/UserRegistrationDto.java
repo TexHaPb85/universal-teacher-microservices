@@ -1,4 +1,4 @@
-package edu.practice.authservice.dto;
+package edu.practice.authservice.model.dto;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

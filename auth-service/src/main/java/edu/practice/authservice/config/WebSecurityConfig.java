@@ -1,61 +1,83 @@
 package edu.practice.authservice.config;
 
-import edu.practice.authservice.service.CustomUserDetailsService;
+import edu.practice.authservice.model.domain.User;
+import edu.practice.authservice.model.domain.UsrProfile;
+import edu.practice.authservice.repo.UserRepository;
+import edu.practice.authservice.service.usr.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
+import org.springframework.boot.autoconfigure.security.oauth2.resource.PrincipalExtractor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
-/**
- * we are defining some security things and our AuthenticationManager
- * to make use of the CustomUserDetailsService we have created before.
- */
+import java.time.LocalDateTime;
+
 @Configuration
+@EnableWebSecurity
+@EnableOAuth2Sso
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-    private final CustomUserDetailsService userDetailsService;
 
-    public WebSecurityConfig(CustomUserDetailsService userDetailsService) {
-        this.userDetailsService = userDetailsService;
+    private final UserService userService;
+
+    public WebSecurityConfig(UserService userService) {
+        this.userService = userService;
     }
 
-    /**
-     * We configured the Spring Security to authorize any request that is authenticated,
-     * but allow any request on /oauth/** endpoint to be allowed even without authentication.
-     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests()
-                    .antMatchers("/oauth/**").permitAll()
-                    .anyRequest().authenticated()//<----fix
+                    .antMatcher("/**").authorizeRequests()
+                    .antMatchers("/", "/login**", "/js/**", "/error**").permitAll()
+                    .anyRequest().authenticated()
+                .and()
+                    .logout().logoutSuccessUrl("/").permitAll()
                 .and()
                     .csrf().disable();
-
     }
+
+    @Bean
+    public AuthenticationSuccessHandler myAuthenticationSuccessHandler(){
+        return new GoogleUrlAuthenticationSuccessHandler();
+    }
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userService);
+    }
+
 
     /**
-     * We did set our CustomUserDetailsService to be used by the AuthenticationManager
-     * and defined the password encoder to use the implementation from BCryptPasswordEncoder.
+     * during google authorization we are looking for user with the same Id im DB,
+     * if we haven`t found it, we get info from google account add it to db
      */
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .userDetailsService(userDetailsService)
-                .passwordEncoder(passwordEncoder());
-    }
-
-    @Override
     @Bean
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
+    public PrincipalExtractor principalExtractor(UserRepository userRepository) {
+        return map -> {
+            String id = (String) map.get("sub");
+            User loggedInUser = userRepository.findById(id).orElseGet(() -> {
+                User newUser = new User();
+                UsrProfile newProfile = new UsrProfile();
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+                newUser.setId(id);
+                newUser.setEmail((String) map.get("email"));
+
+                newProfile.setId(id);
+                newProfile.setLogin((String) map.get("name"));
+                newProfile.setPhotoURL((String) map.get("picture"));
+                newProfile.setLocale((String) map.get("locale"));
+
+                newUser.setProfile(newProfile);
+                return userRepository.save(newUser);
+            });
+
+            loggedInUser.getProfile().setLastVisitDate(LocalDateTime.now());
+            return loggedInUser;
+        };
     }
 }
+

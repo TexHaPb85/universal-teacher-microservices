@@ -1,4 +1,4 @@
-package edu.practice.authservice.domain;
+package edu.practice.authservice.model.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.provider.ClientDetails;

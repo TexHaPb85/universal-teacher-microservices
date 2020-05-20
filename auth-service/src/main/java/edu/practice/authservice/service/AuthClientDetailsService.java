@@ -1,6 +1,6 @@
 package edu.practice.authservice.service;
 
-import edu.practice.authservice.domain.AuthClientDetails;
+import edu.practice.authservice.model.domain.AuthClientDetails;
 import edu.practice.authservice.repo.AuthClientRepository;
 import org.springframework.security.oauth2.provider.ClientDetails;
 import org.springframework.security.oauth2.provider.ClientDetailsService;

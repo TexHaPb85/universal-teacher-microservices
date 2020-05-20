@@ -1,6 +1,6 @@
 package edu.practice.authservice.controller;
 
-import edu.practice.authservice.domain.AuthClientDetails;
+import edu.practice.authservice.model.domain.AuthClientDetails;
 import edu.practice.authservice.service.AuthClientDetailsService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

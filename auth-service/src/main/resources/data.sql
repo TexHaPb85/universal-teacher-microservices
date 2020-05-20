@@ -13,9 +13,3 @@ insert into auth_client_details (access_token_validity, additional_information,
             'refresh_token,password', null, null, null,
             'ui', 'client2');
 
-insert into user (activated,  password,  username, id)
-    values (true,  '$2a$10$fWNTd3H.u7G/aNROVQSifebOkZ2xzU5nUPOCI2Ld42M8E25/ljJqK', 'super-user', 'u1');
-
-insert into user (activated, activation_key, password, reset_password_key, username, id)
-    values (true, 'null', '$2a$10$fWNTd3H.u7G/aNROVQSifebOkZ2xzU5nUPOCI2Ld42M8E25/ljJqK', 'null', 'randomuser1', 'u2');
-
