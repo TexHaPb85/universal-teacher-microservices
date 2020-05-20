@@ -1,7 +1,7 @@
-package edu.practice.englishstudyservice.services;
+package edu.practice.englishstudyservice.services.vocabulary;
 
-import edu.practice.englishstudyservice.domain.NounVerb;
-import edu.practice.englishstudyservice.repos.NounVerbRepository;
+import edu.practice.englishstudyservice.domain.vocabulary.NounVerb;
+import edu.practice.englishstudyservice.repos.vocabulaty.NounVerbRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,8 +1,8 @@
-package edu.practice.englishstudyservice.services;
+package edu.practice.englishstudyservice.services.vocabulary;
 
-import edu.practice.englishstudyservice.domain.IrregularVerb;
-import edu.practice.englishstudyservice.repos.ExamplesRepository;
-import edu.practice.englishstudyservice.repos.IrregularVerbRepository;
+import edu.practice.englishstudyservice.domain.vocabulary.IrregularVerb;
+import edu.practice.englishstudyservice.repos.vocabulaty.ExamplesRepository;
+import edu.practice.englishstudyservice.repos.vocabulaty.IrregularVerbRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

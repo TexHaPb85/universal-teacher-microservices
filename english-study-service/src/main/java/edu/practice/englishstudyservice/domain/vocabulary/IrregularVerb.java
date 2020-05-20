@@ -1,4 +1,4 @@
-package edu.practice.englishstudyservice.domain;
+package edu.practice.englishstudyservice.domain.vocabulary;
 
 import javax.persistence.*;
 import java.util.List;

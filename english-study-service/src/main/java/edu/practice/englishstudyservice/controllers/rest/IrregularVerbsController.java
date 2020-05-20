@@ -1,7 +1,7 @@
 package edu.practice.englishstudyservice.controllers.rest;
 
-import edu.practice.englishstudyservice.domain.IrregularVerb;
-import edu.practice.englishstudyservice.services.IrregularVerbService;
+import edu.practice.englishstudyservice.domain.vocabulary.IrregularVerb;
+import edu.practice.englishstudyservice.services.vocabulary.IrregularVerbService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

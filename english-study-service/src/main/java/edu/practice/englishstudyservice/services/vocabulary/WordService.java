@@ -1,9 +1,9 @@
-package edu.practice.englishstudyservice.services;
+package edu.practice.englishstudyservice.services.vocabulary;
 
-import edu.practice.englishstudyservice.domain.Example;
-import edu.practice.englishstudyservice.domain.Word;
-import edu.practice.englishstudyservice.repos.ExamplesRepository;
-import edu.practice.englishstudyservice.repos.WordRepository;
+import edu.practice.englishstudyservice.domain.vocabulary.Example;
+import edu.practice.englishstudyservice.domain.vocabulary.Word;
+import edu.practice.englishstudyservice.repos.vocabulaty.ExamplesRepository;
+import edu.practice.englishstudyservice.repos.vocabulaty.WordRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

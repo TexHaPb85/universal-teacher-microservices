@@ -1,7 +1,7 @@
 package edu.practice.englishstudyservice.controllers.rest;
 
-import edu.practice.englishstudyservice.domain.PhrasalVerb;
-import edu.practice.englishstudyservice.services.PhrasalVerbsService;
+import edu.practice.englishstudyservice.domain.vocabulary.PhrasalVerb;
+import edu.practice.englishstudyservice.services.vocabulary.PhrasalVerbsService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

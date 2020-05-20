@@ -1,6 +1,8 @@
-package edu.practice.englishstudyservice.domain;
+package edu.practice.englishstudyservice.domain.vocabulary;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import edu.practice.englishstudyservice.domain.vocabulary.IrregularVerb;
+import edu.practice.englishstudyservice.domain.vocabulary.Word;
 
 import javax.persistence.*;
 import java.io.Serializable;

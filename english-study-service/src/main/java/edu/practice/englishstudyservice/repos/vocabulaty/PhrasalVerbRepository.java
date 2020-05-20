@@ -1,6 +1,6 @@
-package edu.practice.englishstudyservice.repos;
+package edu.practice.englishstudyservice.repos.vocabulaty;
 
-import edu.practice.englishstudyservice.domain.PhrasalVerb;
+import edu.practice.englishstudyservice.domain.vocabulary.PhrasalVerb;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

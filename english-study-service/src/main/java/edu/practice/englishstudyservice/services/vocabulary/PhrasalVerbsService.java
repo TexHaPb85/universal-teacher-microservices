@@ -1,12 +1,11 @@
-package edu.practice.englishstudyservice.services;
+package edu.practice.englishstudyservice.services.vocabulary;
 
-import edu.practice.englishstudyservice.domain.PhrasalVerb;
-import edu.practice.englishstudyservice.repos.PhrasalVerbRepository;
+import edu.practice.englishstudyservice.domain.vocabulary.PhrasalVerb;
+import edu.practice.englishstudyservice.repos.vocabulaty.PhrasalVerbRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.Random;
 
 @Service

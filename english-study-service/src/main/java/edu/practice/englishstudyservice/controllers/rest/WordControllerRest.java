@@ -1,7 +1,7 @@
 package edu.practice.englishstudyservice.controllers.rest;
 
-import edu.practice.englishstudyservice.domain.Word;
-import edu.practice.englishstudyservice.services.WordService;
+import edu.practice.englishstudyservice.domain.vocabulary.Word;
+import edu.practice.englishstudyservice.services.vocabulary.WordService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

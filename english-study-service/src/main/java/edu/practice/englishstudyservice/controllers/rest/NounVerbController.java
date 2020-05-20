@@ -1,7 +1,7 @@
 package edu.practice.englishstudyservice.controllers.rest;
 
-import edu.practice.englishstudyservice.domain.NounVerb;
-import edu.practice.englishstudyservice.services.NounVerbService;
+import edu.practice.englishstudyservice.domain.vocabulary.NounVerb;
+import edu.practice.englishstudyservice.services.vocabulary.NounVerbService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
