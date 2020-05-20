@@ -30,3 +30,63 @@
     justify-content: space-around;
     padding-bottom: 200px;
 }
+.english-list{
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    margin-right: 10px;
+}
+
+.english-list a {
+    margin: 10px 0;
+    background: #c9c9c9;
+    padding: 5px;
+    color: black;
+}
+
+.english-tests{
+    display: flex;
+}
+
+.english-test-list{
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+}
+
+.english-test-list a{
+    margin: 10px 0;
+    background: #c9c9c9;
+    padding: 5px;
+    color: black;
+}
+.verbs {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.verbs h1{
+    margin-bottom: 20px;
+    color: #696969;
+}
+
+
+.verbs th {
+    text-align: left;
+    color: #fff;
+    background-color: #6b78a7;
+    padding: 10px;
+    height: 20px;
+}
+.verbs td{
+    min-width: 300px;
+    padding: 5px 0 5px 10px;
+    color: #696969;
+    border-bottom: 2px solid #696969;
+}
+.verbs table{
+    margin-bottom: 40px;
+}
+.verbs {
+    min-height: 72vh;
+}

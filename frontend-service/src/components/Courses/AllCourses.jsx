@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "../../css/courses.css"
 import {connect} from "react-redux";
-import {testContent} from "../../actions/personActions"
+import {irregularVerbs} from "../../actions/personActions"
 import {NavLink, withRouter} from "react-router-dom";
 import {loginData} from "../../actions/personActions";
 import {bindActionCreators} from "redux";
@@ -11,7 +11,7 @@ class AllCourses extends Component {
 
     componentWillMount() {
 
-        this.props.testData(testContent());
+        this.props.testData(irregularVerbs());
     }
     render() {
 
@@ -27,7 +27,7 @@ class AllCourses extends Component {
 const mapDispatchToProps = (dispatch) => {
 
     return {
-        testData: bindActionCreators(testContent, dispatch),
+        testData: bindActionCreators(irregularVerbs, dispatch),
     }
 
 };
