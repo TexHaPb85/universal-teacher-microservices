@@ -2,6 +2,7 @@ package edu.practice.englishstudyservice.services.grammar;
 
 import edu.practice.englishstudyservice.domain.grammar.GrammarLesson;
 import edu.practice.englishstudyservice.repos.grammar.GrammarLessonRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,5 +22,9 @@ public class GrammarLessonsService {
 
     public Optional<GrammarLesson> getLessonById(Long lessonId){
         return grammarLessonRepository.findById(lessonId);
+    }
+
+    public List<String> getTopics() {
+        return grammarLessonRepository.findTopics();
     }
 }
