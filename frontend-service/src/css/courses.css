@@ -12,12 +12,13 @@
 .courses-menu li{
     display: block;
 
+
 }
 
 .courses-menu li a{
     display: inline-block;
-    height: 5vh;
-    width: 16vw;
+    height: 2.5em;
+    width: 20em;
     color: black;
     background-color: #c5c5c5;
     text-align: center;
@@ -25,16 +26,22 @@
     margin: 10px 0;
 }
 .courses-flex {
-    margin: 30px 0;
     display: flex;
-    justify-content: space-around;
-    padding-bottom: 200px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 100em;
+    margin: 30px auto 200px 8em;
 }
 .english-list{
     display: flex;
     flex-direction: column;
     width: 15em;
     margin-right: 10px;
+}
+.themes{
+    width: 18.8em;
+    margin-right: 6em;
+    margin-bottom: 30px;
 }
 
 .english-list a {

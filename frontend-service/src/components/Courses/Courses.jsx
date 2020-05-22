@@ -49,19 +49,29 @@ class Courses extends Component {
                     <h1>Курсы</h1>
                     <CoursesNavigation/>
                     <div className="courses-flex">
-                    <div className="carousel-cell"><img src={Image1}/>
+
+                    <div className="carousel-cell themes" ><img src={Image1}/>
                         <Link className={"link-cell"} to={"/english"}>
                             <h2> Английский</h2>
                             <p>В этом курсе вам раскажут как прожить и многое другое</p>
                         </Link>
 
                     </div>
-                    <div className="carousel-cell"><img src={Image2}/>
+                    <div className="carousel-cell themes"><img src={Image2}/>
                         <Link className={"link-cell"} to={"/"}>
                             <h2> Программирование</h2>
                             <p>В этом курсе вам раскажут как прожить и многое другое</p>
                         </Link>
-
+                    </div> <div className="carousel-cell themes"><img src={Image2}/>
+                        <Link className={"link-cell"} to={"/"}>
+                            <h2> Программирование</h2>
+                            <p>В этом курсе вам раскажут как прожить и многое другое</p>
+                        </Link>
+                    </div> <div className="carousel-cell themes"><img src={Image2}/>
+                        <Link className={"link-cell"} to={"/"}>
+                            <h2> Программирование</h2>
+                            <p>В этом курсе вам раскажут как прожить и многое другое</p>
+                        </Link>
                     </div>
                     </div>
                 </section>

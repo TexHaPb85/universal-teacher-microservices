@@ -9,10 +9,24 @@ class EnglishCourses extends Component {
 
         return (
             <section className={"english-courses verbs"}>
-                <h1>Курсы англ</h1>
+                <h1>Словарний запас</h1>
                 <div className={"english-tests"}>
                 <ul className={"english-list"}>
                     <Link  to={"/english/irregular-verbs"}><li>Неправильні дієслова </li></Link>
+                   <Link  to={"/english/phrasal-verbs"}> <li>Фразові дієслова</li></Link>
+                   <Link  to={"/english/noun-verbs"}> <li>Іменні дієслова</li></Link>
+
+                </ul>
+                <ul className={"english-test-list"}>
+                    <Link  to={"/english/irregular-verbs/train"}><li>Тест по неправильним дієсловам</li> </Link>
+                   <Link  to={"/english/phrasal-verbs/train"}> <li>Тест по фразовим дієсловам</li></Link>
+                   <Link  to={"/english/noun-verbs/train"}> <li>Тест по іменним дієслова</li></Link>
+                </ul>
+                </div>
+                <h1>Граматика</h1>
+                <div className={"english-tests"}>
+                <ul className={"english-list"}>
+                    <Link  to={"/english/grammar/"}><li>Граматика</li></Link>
                    <Link  to={"/english/phrasal-verbs"}> <li>Фразові дієслова</li></Link>
                    <Link  to={"/english/noun-verbs"}> <li>Іменні дієслова</li></Link>
 

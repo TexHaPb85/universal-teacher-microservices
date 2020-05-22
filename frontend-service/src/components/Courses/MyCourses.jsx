@@ -3,7 +3,7 @@ import "../../css/courses.css"
 import {connect} from "react-redux";
 import {irregularVerbs} from "../../actions/personActions"
 import {NavLink, withRouter} from "react-router-dom";
-import {loginData} from "../../actions/personActions";
+
 import {bindActionCreators} from "redux";
 import CoursesNavigation from "./CoursesNavigation";
 
@@ -11,8 +11,8 @@ class MyCourses extends Component {
 
     componentWillMount() {
 
-        if(Object.keys(this.props.lesson).length===0){
-        this.props.testData(irregularVerbs());}
+
+        this.props.testData(irregularVerbs());
 
     }
     render() {
@@ -27,17 +27,14 @@ class MyCourses extends Component {
                         <th>Past participle</th>
                         <th>Translation</th>
                     </tr>
-                    <td>{this.props.irVerbs.map(({infinitive}) =>
-                        <tr>{infinitive}</tr>)}</td>
-
-                    <td>{this.props.irVerbs.map(({pastSimple}) =>
-                        <tr>{pastSimple}</tr>)}</td>
-
-                    <td>{this.props.irVerbs.map(({pastParticiple}) =>
-                        <tr>{pastParticiple}</tr>)}</td>
-
-                    <td>{this.props.irVerbs.map(({translation}) =>
-                        <tr>{translation}</tr>)}</td>
+                    {this.props.irVerbs.map(({infinitive,pastSimple,pastParticiple,translation,id}) =>{
+                        return <tr key={id}>
+                            <td>{infinitive}</td>
+                            <td>{pastSimple}</td>
+                            <td>{pastParticiple}</td>
+                            <td>{translation}</td>
+                        </tr>
+                    })}
                 </table>
             </section>
         )
@@ -58,7 +55,7 @@ const mapStateToProps = (state) => {
     return {
         persons: state.persons,
         auth: state.isLogged,
-        lesson : state.lesson
+        irVerbs : state.irVerbs
 
     }
 };
