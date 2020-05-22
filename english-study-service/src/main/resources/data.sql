@@ -21,3 +21,13 @@ insert into grammar_tasks values('11', 'does', 'What is the form of verb "do" fo
 insert into grammar_tasks values('12', 'Does she do her homework?', 'Translate to the english using present simple: Вона робить своє домашнє завдання?','1');
 insert into grammar_tasks values('13', 'Does John run every morning?','Translate to the english using present simple: Джон бігає кожен ранок?','1');
 
+insert into grammar_lessons values (
+                                       '2',
+                                       'The Past Simple tense, also called the Simple Past, is used for past actions that happened either at a specific time, which can either be given by a time phrase (yesterday, last year, etc.) or understood from the context. ',
+                                       'past-simple',
+                                       'https://www.youtube.com/watch?v=9gD1HMf45G8');
+
+insert into grammar_tasks values('21', 'did', 'What is the form of verb "do" for he/she/it in past simple?','2');
+insert into grammar_tasks values('22', 'Did she do her homework?', 'Translate to the english using present simple: Вона робила своє домашнє завдання?','2');
+insert into grammar_tasks values('23', 'Did John run every morning?','Translate to the english using present simple: Джон бігав кожен ранок?','2');
+

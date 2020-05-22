@@ -5,12 +5,14 @@ import edu.practice.englishstudyservice.services.grammar.GrammarLessonsService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
+@RequestMapping("grammar")
 public class GrammarLessonController {
     private final GrammarLessonsService grammarLessonsService;
 
@@ -18,6 +20,11 @@ public class GrammarLessonController {
         this.grammarLessonsService = grammarLessonsService;
     }
 
+    @GetMapping
+    public ResponseEntity<List<String>> getTopics(){
+        return ResponseEntity
+                .ok(grammarLessonsService.getTopics());
+    }
     @GetMapping("{topic}")
     public ResponseEntity<List<GrammarLesson>> getLessonsByTopic(@PathVariable String topic) {
         return ResponseEntity
