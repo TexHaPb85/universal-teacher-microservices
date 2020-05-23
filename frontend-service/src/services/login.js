@@ -1,12 +1,23 @@
 import axios from 'axios'
-
-
+import {grammarTopic} from "../components/Courses/GrammarLesson"
+import store from "../index";
 // const  WEB_API_URL = 'http://localhost:8081';
-// const LOGIN_API_URL = `${WEB_API_URL}/login`;
+
 
 class Login {
 
 
+    topicFetch() {
+
+        const grammarPath = grammarTopic()
+         return  axios.get(`${'http://localhost:9001/grammar/'+grammarPath}`)
+}
+    grammarLessonsFetch() {
+         return  axios.get(`${'http://localhost:9001/grammar/'}`)
+}
+//     lessonFetch() {
+//          return  axios.get(`${'http://localhost:9001/grammar/'+{lessonId}}`)
+// }
     irregularFetch (){
         return  axios.get(`${'http://localhost:9001/irregular-verbs'}`
         //     , {

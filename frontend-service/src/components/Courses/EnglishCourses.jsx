@@ -2,10 +2,30 @@ import React, {Component} from 'react';
 import {BrowserRouter as Router, Link, NavLink, Route, Switch, withRouter} from "react-router-dom";
 import "../../css/courses.css"
 import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import {grammarFetch, irregularVerbs} from "../../actions/personActions";
+
+// export const  grammarPath =(path)=>{
+//     return path
+// }
 
 class EnglishCourses extends Component {
+//     componentDidMount() {
+//     this.props.testData(grammarFetch())
+// }
+    componentWillMount() {
+
+            this.props.testData(grammarFetch())
+    }
+
 
     render() {
+
+    const grammarLessons =()=>{ return (this.props.grammar.map(lesson => {
+        return <Link onClick={this.props.getTopic.bind(this,lesson)}  to={"english/grammar/"+lesson}><li key={lesson}>{lesson}</li></Link>
+
+    }))}
+
 
         return (
             <section className={"english-courses verbs"}>
@@ -26,9 +46,7 @@ class EnglishCourses extends Component {
                 <h1>Граматика</h1>
                 <div className={"english-tests"}>
                 <ul className={"english-list"}>
-                    <Link  to={"/english/grammar/"}><li>Граматика</li></Link>
-                   <Link  to={"/english/phrasal-verbs"}> <li>Фразові дієслова</li></Link>
-                   <Link  to={"/english/noun-verbs"}> <li>Іменні дієслова</li></Link>
+                    {grammarLessons()}
 
                 </ul>
                 <ul className={"english-test-list"}>
@@ -45,7 +63,12 @@ class EnglishCourses extends Component {
 
 const mapDispatchToProps = (dispatch) => {
 
-    return {}
+    return {
+        getTopic: (topicData) => {
+            dispatch({type: "GET_ACTIVE_TOPIC",payload: topicData })
+        },
+        testData: bindActionCreators(grammarFetch, dispatch),
+    }
 
 };
 const mapStateToProps = (state) => {
@@ -53,9 +76,9 @@ const mapStateToProps = (state) => {
 
     return {
         persons: state.persons,
-        auth: state.isLogged
-
-
+        auth: state.isLogged,
+        grammar: state.grammar,
+        activeGrammarTopic: state.activeGrammarTopic
     }
 };
 

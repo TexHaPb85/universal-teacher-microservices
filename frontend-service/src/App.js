@@ -13,6 +13,7 @@ import VerbsTrain from "./components/Courses/VerbsTrain"
 import NounVerbs from "./components/Courses/NounVerbs"
 import Homepage from "./components/Homepage/HomePage"
 import ScrollToTop from "./components/Features/ScrollToTop";
+import GrammarLesson from "./components/Courses/GrammarLesson";
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import CoursesNavigation from "./components/Courses/CoursesNavigation";
@@ -40,6 +41,8 @@ class App extends React.Component {
                         <Route path={"/english/phrasal-verbs/train"}  component={VerbsTrain}/>
                         <Route path={"/english/noun-verbs"} exact component={NounVerbs}/>
                         <Route path={"/english/noun-verbs/train"}  component={VerbsTrain}/>
+                        <Route path={"/english/grammar/present-simple"}  component={GrammarLesson}/>
+                        <Route path={"/english/grammar/past-simple"}  component={GrammarLesson}/>
 
                     <Route path={"/home"} component={Homepage}/>
                 </Switch>

@@ -13,6 +13,28 @@ export const googleAuth = () => {
         // }))
     }};
 
+export const grammarFetch =() =>{
+    return function (dispatch) {
+        dispatch({type: "GET_TEST_START"});
+        login.grammarLessonsFetch().then((res) => dispatch({
+            type: "GET_GRAMMAR_LESSONS",
+            payload: res.data
+        })).catch((response) => dispatch({
+            type: "deadData",
+            error: response.error
+        }))
+    }};
+export const topic = () =>{
+    return function (dispatch) {
+        dispatch({type: "RESET_TOPICS"});
+        login.topicFetch().then((res) => dispatch({
+            type: "GET_TOPIC_LESSONS",
+            payload: res.data
+        })).catch((response) => dispatch({
+            type: "deadData",
+            error: response.error
+        }))
+    }};
 
 export const irregularVerbs =() =>{
     return function (dispatch) {
