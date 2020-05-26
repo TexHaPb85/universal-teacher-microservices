@@ -4,35 +4,25 @@ import "../../css/courses.css"
 import {connect} from "react-redux";
 import {topic} from "../../actions/personActions";
 import {bindActionCreators} from "redux";
-import Lessons from "./Lessons";
-
-export const  grammarTopic =()=>{
-
-    let str = window.location.pathname;
-    let n = str.lastIndexOf('/');
-
-    return str.substring(n + 1);
-}
 
 class GrammarLesson extends Component {
-    componentWillMount() {
-
-        this.props.grammarLessonsData(topic())
-    //
-    // this.props.presentSimpleData(presentSimple())
-    //
-    // this.props.grammarLesson.map(({youTubeUrl})=>{console.log(youTubeUrl)})
-
-        // console.log(this.props.lesson)
-    }
+    componentWillMount() {}
     render() {
-        const grammarLessons =()=>{ return (this.props.grammarLessons.map(({topic,lessonId}) => {
-            // console.log(topic)
-            return <Link to={"english/grammar/"+lessonId}><li  id={lessonId}>{topic}</li></Link>
+        const {lessonIdCheck,x} = this.props.getActiveLesson
+        const grammarLessons =()=>{ return (this.props.grammarLessons.map(({topic,lessonId,youTubeUrl,textDescription}) => {
+            if (lessonId ===lessonIdCheck){
+            return <React.Fragment>
+                <div>Описаник Урока: {textDescription}</div>
+                <iframe width="729" height="410" src={"https://www.youtube.com/embed/47LEelX7nhg"} frameBorder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen></iframe>
+
+            </React.Fragment>}
 
         }))}
         return (
             <section className={"verbs"}>
+                <h1>Урок {x} </h1>
                 <ul className={"english-list"}>
                 { grammarLessons()}
                 </ul>
@@ -57,7 +47,8 @@ const mapStateToProps = (state) => {
     return {
         persons: state.persons,
         auth: state.isLogged,
-        grammarLessons: state.grammarLessons
+        grammarLessons: state.grammarLessons,
+        getActiveLesson: state.activeLesson
 
 
     }

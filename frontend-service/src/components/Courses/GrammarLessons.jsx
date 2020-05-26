@@ -1,39 +1,38 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, NavLink, Route, Switch, withRouter} from "react-router-dom";
+import {Link, Route, Switch, withRouter} from "react-router-dom";
 import "../../css/courses.css"
 import {connect} from "react-redux";
+import {topic} from "../../actions/personActions";
 import {bindActionCreators} from "redux";
-import {grammarFetch, irregularVerbs} from "../../actions/personActions";
 
-class EnglishCourses extends Component {
-//     componentDidMount() {
-//     this.props.testData(grammarFetch())
-// }
+export const  grammarTopic =()=>{
+
+    let str = window.location.pathname;
+    let n = str.lastIndexOf('/');
+
+    return str.substring(n + 1);
+}
+
+class GrammarLessons extends Component {
     componentWillMount() {
-
-        this.props.testData(grammarFetch())
+        this.props.grammarLessonsData(topic())
     }
-
-
     render() {
-        const grammarLessons =()=>{ return (this.props.grammar.map(lesson => {
-            return <Link to={"english/grammar/"+lesson}><li key={lesson}>{lesson}</li></Link>
+        const grammarLessons =()=>{ return (this.props.grammarLessons.map(({topic,lessonId}) => {
+            let x=1
+            return <Link onClick={this.props.getLesson(lessonId,x)} key={x} to={topic+"/"+lessonId}><li  id={lessonId}>{topic} {x++} </li></Link>
+
 
         }))}
-
-
         return (
-            <section className={"english-courses verbs"}>
+            <section className={"verbs"}>
+                <ul className={"english-list"}>
+                    { grammarLessons()
+                    }
+                </ul>
 
-                <h1>Уроки</h1>
-                <div className={"english-tests"}>
-                    <ul className={"english-list"}>
-                        {grammarLessons()}
-
-                    </ul>
-
-                </div>
             </section>
+
         )
     }
 
@@ -42,7 +41,11 @@ class EnglishCourses extends Component {
 const mapDispatchToProps = (dispatch) => {
 
     return {
-        testData: bindActionCreators(grammarFetch, dispatch),
+        getLesson: (lessonId,x) => {
+            dispatch({type: "GET_ACTIVE_LESSON",payload: {lessonIdCheck:lessonId,x:x} })
+        },
+        grammarLessonsData: bindActionCreators(topic, dispatch)
+
     }
 
 };
@@ -52,8 +55,8 @@ const mapStateToProps = (state) => {
     return {
         persons: state.persons,
         auth: state.isLogged,
-        grammarLessons: state.grammarLessons
+        grammarLessons: state.grammarLessons,
     }
 };
 
-export default withRouter( connect(mapStateToProps, mapDispatchToProps)(EnglishCourses));
+export default withRouter( connect(mapStateToProps, mapDispatchToProps)(GrammarLessons));

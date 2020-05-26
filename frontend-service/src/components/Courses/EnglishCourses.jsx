@@ -1,31 +1,27 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, NavLink, Route, Switch, withRouter} from "react-router-dom";
+import { Link, NavLink, Route, Switch, withRouter} from "react-router-dom";
 import "../../css/courses.css"
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
-import {grammarFetch, irregularVerbs} from "../../actions/personActions";
+import {grammarFetch, } from "../../actions/personActions";
 
-// export const  grammarPath =(path)=>{
-//     return path
-// }
 
 class EnglishCourses extends Component {
-//     componentDidMount() {
-//     this.props.testData(grammarFetch())
-// }
+
     componentWillMount() {
 
             this.props.testData(grammarFetch())
     }
 
-
     render() {
 
     const grammarLessons =()=>{ return (this.props.grammar.map(lesson => {
-        return <Link onClick={this.props.getTopic.bind(this,lesson)}  to={"english/grammar/"+lesson}><li key={lesson}>{lesson}</li></Link>
+        return <React.Fragment>
+     <Link onClick={this.props.getTopic.bind(this,lesson)}  to={"english/grammar/"+lesson}>
+            <li key={lesson}>{lesson}</li></Link>
+        </React.Fragment>
 
     }))}
-
 
         return (
             <section className={"english-courses verbs"}>
@@ -49,12 +45,8 @@ class EnglishCourses extends Component {
                     {grammarLessons()}
 
                 </ul>
-                <ul className={"english-test-list"}>
-                    <Link  to={"/english/irregular-verbs/train"}><li>Тест по неправильним дієсловам</li> </Link>
-                   <Link  to={"/english/phrasal-verbs/train"}> <li>Тест по фразовим дієсловам</li></Link>
-                   <Link  to={"/english/noun-verbs/train"}> <li>Тест по іменним дієслова</li></Link>
-                </ul>
                 </div>
+
             </section>
         )
     }

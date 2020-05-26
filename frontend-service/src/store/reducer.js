@@ -4,10 +4,10 @@ const initialState = {
     irVerbs:[{"id":1,"infinitive":"ch","pastSimple":"ew","pastParticiple":"d","translation":"d"}],
     phrVerbs:[{"id":1,"infinitive":"ch","pastSimple":"ew","pastParticiple":"d","translation":"d"}],
     nounVerbs:[{"id":1,"infinitive":"ch","pastSimple":"ew","pastParticiple":"d","translation":"d"}],
-    grammar:[],
+    grammar:["english"],
     activeGrammarTopic:'',
     grammarLessons:[],
-    grammarLesson:[],
+    activeLesson:[],
     randTrain:[],
     isLogged: true,
     creating: false,
@@ -28,7 +28,7 @@ const reducer = (state = initialState, action) => {
         return  {...state}
     }
     if (action.type === "RESET_TOPICS"){
-        return  {...state,grammarLessons:initialState.grammarLesson}
+        return  {...state,grammarLessons:initialState.grammarLessons}
     }
     if (action.type === "RESET_TRAIN"){
         return  {...state, randTrain: initialState.randTrain}
@@ -38,6 +38,9 @@ const reducer = (state = initialState, action) => {
     }
     if(action.type ==="GET_ACTIVE_TOPIC"){
         return {...state, activeGrammarTopic: action.payload}
+    }
+    if(action.type ==="GET_ACTIVE_LESSON"){
+        return {...state, activeLesson: action.payload}
     }
     if (action.type === "GET_TOPIC_LESSONS"){
         return  {...state, grammarLessons: action.payload}
