@@ -7,6 +7,7 @@ import edu.practice.englishstudyservice.repos.grammar.GrammarTaskRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -36,7 +37,7 @@ public class GrammarLessonsService {
     }
 
     public GrammarLesson addTaskToLesson(GrammarTask task, Long lessonId){
-        GrammarLesson lesson = grammarLessonRepository.getOne(lessonId);
+        GrammarLesson lesson = grammarLessonRepository.findById(lessonId).orElseThrow(()->new NoSuchElementException());
         task.setLesson(lesson);
         grammarTaskRepository.save(task);
         return grammarLessonRepository.getOne(lessonId);
