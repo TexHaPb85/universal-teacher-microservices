@@ -3,16 +3,14 @@ package edu.practice.englishstudyservice.controllers.rest;
 import edu.practice.englishstudyservice.domain.grammar.GrammarLesson;
 import edu.practice.englishstudyservice.services.grammar.GrammarLessonsService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("grammar")
+
 public class GrammarLessonController {
     private final GrammarLessonsService grammarLessonsService;
 
