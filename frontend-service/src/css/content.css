@@ -8,9 +8,7 @@
         background-color: #c3deda;
 
     }
-
     .carousel{
-
           /*box-sizing: border-box;*/
           /*border: 1px solid #c5c5c5 ;*/
         width: 100%;
@@ -152,4 +150,40 @@
              /*-webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;*/
              /*transition: opacity 0.3s, transform 0.3s, filter 0.3s;*/
          }
+
+    .review-container {
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    .review-card{
+        width: 20vw;
+        height: 30vh;
+        margin: 30px;
+        display: flex;
+
+        background: #4A7C67;
+    }
+    .review-card p{
+        position: relative;
+        padding-right: 12px;
+        margin-left: 10px;
+        max-width: 10vw;
+        height: 30vh;
+        word-break: break-word;
+        /*overflow: auto;*/
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+    }
+
+    .review-card img{
+        width: 10vw;
+        border-radius: 50%;
+    }
+.thumb-vertical{
+    width: 20px;
+    color: #6b78a7;
+}
 
