@@ -11,6 +11,7 @@ import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("grammar")
+@CrossOrigin(origins="*")
 public class GrammarLessonController {
     private final GrammarLessonsService grammarLessonsService;
 

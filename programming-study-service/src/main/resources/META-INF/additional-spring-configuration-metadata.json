@@ -1,9 +1,0 @@
-{
-  "properties": [
-    {
-      "name": "prog.study.count",
-      "type": "java.lang.String",
-      "description": "Description for prog.study.count.some decrreption"
-    }
-  ]
-}

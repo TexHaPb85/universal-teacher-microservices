@@ -1,4 +1,4 @@
-package edu.practice.englishstudyservice.domain.grammar;
+package edu.practice.programmingstudyservice.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "grammar_tasks")
-public class GrammarTask implements Serializable {
+@Table(name = "tasks")
+public class Task implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long taskId;
@@ -17,9 +17,9 @@ public class GrammarTask implements Serializable {
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name="less_id", nullable=false)
-    private GrammarLesson lesson;
+    private Lesson lesson;
 
-    public GrammarTask() {
+    public Task() {
     }
 
     public Long getTaskId() {
@@ -46,11 +46,11 @@ public class GrammarTask implements Serializable {
         this.answer = answer;
     }
 
-    public GrammarLesson getLesson() {
+    public Lesson getLesson() {
         return lesson;
     }
 
-    public void setLesson(GrammarLesson lesson) {
+    public void setLesson(Lesson lesson) {
         this.lesson = lesson;
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface GrammarLessonRepository extends JpaRepository<GrammarLesson, Long> {
-    final String FIND_TOPICS = "SELECT topic FROM grammar_lessons";
+    final String FIND_TOPICS = "SELECT DISTINCT topic FROM grammar_lessons";
 
     List<GrammarLesson> findByTopicOrderByLessonIdAsc(String lessonId);
 

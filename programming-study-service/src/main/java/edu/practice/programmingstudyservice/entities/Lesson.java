@@ -1,12 +1,12 @@
-package edu.practice.englishstudyservice.domain.grammar;
+package edu.practice.programmingstudyservice.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "grammar_lessons")
-public class GrammarLesson implements Serializable {
+@Table(name = "lessons")
+public class Lesson implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long lessonId;
@@ -15,9 +15,9 @@ public class GrammarLesson implements Serializable {
     private String topic;
 
     @OneToMany(mappedBy = "lesson")
-    private List<GrammarTask> tasks;
+    private List<Task> tasks;
 
-    public GrammarLesson() {
+    public Lesson() {
     }
 
     public Long getLessonId() {
@@ -52,11 +52,11 @@ public class GrammarLesson implements Serializable {
         this.topic = topic;
     }
 
-    public List<GrammarTask> getTasks() {
+    public List<Task> getTasks() {
         return tasks;
     }
 
-    public void setTasks(List<GrammarTask> tasks) {
+    public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
     }
 }
