@@ -1,11 +1,12 @@
 package edu.practice.englishstudyservice.domain.grammar;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "grammar_lessons")
-public class GrammarLesson {
+public class GrammarLesson implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long lessonId;

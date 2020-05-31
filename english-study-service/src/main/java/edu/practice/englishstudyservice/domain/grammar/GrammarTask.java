@@ -3,10 +3,11 @@ package edu.practice.englishstudyservice.domain.grammar;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "grammar_tasks")
-public class GrammarTask {
+public class GrammarTask implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long taskId;
