@@ -12,6 +12,7 @@
     "react-async": "^9.0.0",
     "react-awesome-slider": "^2.0.1",
     "react-bootstrap": "^1.0.0-beta.14",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.10.2",
     "react-flickity-component": "^3.4.0",
     "react-multi-carousel": "^2.3.0",
