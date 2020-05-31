@@ -43,8 +43,7 @@ class App extends React.Component {
                         <Route path={"/english/noun-verbs"} exact component={NounVerbs}/>
                         <Route path={"/english/noun-verbs/train"}  component={VerbsTrain}/>
                         <Route path={'/english/grammar/:lesson'}   exact component={GrammarLessons}/>
-                        <Route path={'/english/grammar/:lesson/:lessonId'} exact component={GrammarLesson}/>
-
+                        <Route path={'/english/grammar/:lesson/:lessonId'}  exact component={GrammarLesson}/>
 
                     <Route path={"/home"} component={Homepage}/>
                 </Switch>

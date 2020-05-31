@@ -54,6 +54,22 @@ li a{
     margin-left: 10vw;
     z-index: 2;
 }
+@media only screen and (max-width: 770px) {
+    .Logo{
+        position:absolute;
+        width: 180px;
+        top: -5px;
+        margin-left: 5vw;
+        z-index: 2;}
+    .container{
+        display: flex;
+        height: 45px;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-items: flex-end;
+        background-color: var(--maincolor);
+    }
+}
 
 .btnh1{
 
@@ -66,6 +82,7 @@ li a{
 
     border-right: 17px solid var(--maincolor);
 }
+
 
 .btnh2{
 

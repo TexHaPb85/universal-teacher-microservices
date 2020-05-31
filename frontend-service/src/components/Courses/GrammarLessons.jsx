@@ -17,10 +17,12 @@ class GrammarLessons extends Component {
     componentWillMount() {
         this.props.grammarLessonsData(topic())
     }
+
     render() {
+
         const grammarLessons =()=>{ return (this.props.grammarLessons.map(({topic,lessonId}) => {
             let x=1
-            return <Link onClick={this.props.getLesson(lessonId,x)} key={x} to={topic+"/"+lessonId}><li  id={lessonId}>{topic} {x++} </li></Link>
+            return <Link onClick={this.props.getLesson(lessonId,x)} key={x} to={`${topic}/${lessonId}`}><li  id={lessonId}>{topic} {x++} </li></Link>
 
 
         }))}
@@ -29,6 +31,7 @@ class GrammarLessons extends Component {
                 <ul className={"english-list"}>
                     { grammarLessons()
                     }
+                    <h1>KUK</h1>
                 </ul>
 
             </section>
