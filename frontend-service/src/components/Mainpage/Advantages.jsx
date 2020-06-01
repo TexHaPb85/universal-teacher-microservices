@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Img1 from "../../imgs/advantages/advantages1.png";
 import Img2 from "../../imgs/advantages/advantages2.png";
 import Img3 from "../../imgs/advantages/advantages3.png";
-import "react-perfect-scrollbar/dist/css/styles.css";
 import  "../../css/advantages.css";
 class Advantages extends  Component{
     render() {

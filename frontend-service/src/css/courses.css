@@ -99,3 +99,36 @@
 .verbs {
     min-height: 72vh;
 }
+.task-button{
+    display: block;
+    margin:30px 0;
+    width: 729px;
+    height: 50px;
+    text-align: center;
+    background: #4e4e4e;
+    color: #ffffff;
+    font-size: 24px;
+    padding-top: 7px;
+}
+
+.task-button:hover {
+    color: #4e4e4e;
+    background: #b3b3b3;
+}
+.task-style{
+    width: 70vw
+}
+.task-number{
+    margin: 20px 0;
+    font-size: 1.4em;
+}
+.task-input{
+    width: 20vw;
+    height: 30px;
+    font-size: 1.1em;
+}
+.answer-check{
+display: none;
+    visibility: hidden;
+}
+body {oncontextmenu:"return false;"}

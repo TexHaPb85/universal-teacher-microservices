@@ -15,7 +15,8 @@ insert into grammar_lessons values (
                                        '100',
                                        'The present simple is a verb tense with two main uses. Depending on the person, the simple present tense is formed by using the root form or by adding ‑s or ‑es to the end.',
                                        'present-simple',
-                                       'https://www.youtube.com/watch?v=47LEelX7nhg');
+
+                                       'https://www.youtube.com/embed/47LEelX7nhg');
 
 insert into grammar_tasks values('11', 'does', 'What is the form of verb "do" for he/she/it in present simple?','100');
 insert into grammar_tasks values('12', 'Does she do her homework?', 'Translate to the english using present simple: Вона робить своє домашнє завдання?','100');
@@ -25,7 +26,7 @@ insert into grammar_lessons values (
                                        '102',
                                        'The Past Simple tense, also called the Simple Past, is used for past actions that happened either at a specific time, which can either be given by a time phrase (yesterday, last year, etc.) or understood from the context. ',
                                        'past-simple',
-                                       'https://www.youtube.com/watch?v=9gD1HMf45G8');
+                                       'https://www.youtube.com/embed/9gD1HMf45G8');
 
 insert into grammar_tasks values('21', 'did', 'What is the form of verb "do" for he/she/it in past simple?','102');
 insert into grammar_tasks values('22', 'Did she do her homework?', 'Translate to the english using present simple: Вона робила своє домашнє завдання?','102');

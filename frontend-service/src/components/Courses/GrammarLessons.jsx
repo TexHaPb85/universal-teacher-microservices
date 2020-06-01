@@ -31,7 +31,7 @@ class GrammarLessons extends Component {
                 <ul className={"english-list"}>
                     { grammarLessons()
                     }
-                    <h1>KUK</h1>
+
                 </ul>
 
             </section>
