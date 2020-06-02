@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
+import React, {Component,useState} from 'react';
 import {Link, withRouter} from "react-router-dom";
 import "../../css/courses.css"
 import {connect} from "react-redux";
 import {topic} from "../../actions/personActions";
 import {bindActionCreators} from "redux";
 
-class GrammarLessonTest extends Component {
+class ProgrammingLessonTest extends Component {
+
     handleUserInput = (e) => {
-        this.props.grammarLessons.map(({lessonId,tasks}) => {
+        this.props.programmingLessons.map(({lessonId,tasks}) => {
             let taskNumber = 0;
             let taskIdCount =0;
             if (lessonId === this.props.getActiveLesson.lessonIdCheck) {
@@ -25,30 +26,21 @@ class GrammarLessonTest extends Component {
 
         e.preventDefault()
     }
-
-
-
     render() {
         const {lessonIdCheck,x} = this.props.getActiveLesson;
-        const grammarLessons =()=>{  return (this.props.grammarLessons.slice(0, 1).map(({lessonId,tasks}) => {
+        const grammarLessons =()=>{  return (this.props.programmingLessons.map(({lessonId,tasks}) => {
             let taskNumber = 1;
             if (lessonId === lessonIdCheck ){
                 return (tasks.map(({taskId,question,answer})=>{
 
-                        return  <React.Fragment>
-                            <div className={"task-number"}>Завдання {taskNumber++}</div>
-                            <div className={"task-style"}>{question}</div>
-                            <input className={"task-input"}  type={"text"} id={taskId} onChange={this.handleChange} ref={"title"}/>
-                            <div className={"answer-check"} ref={`taskId+44`}>{answer}</div>
-
-
+                    return  <React.Fragment>
+                        <div className={"task-number"}>Завдання {taskNumber++}</div>
+                        <div className={"task-style"}>{question}</div>
+                        <input className={"task-input"}  type={"text"} id={taskId} onChange={this.handleChange} ref={"title"}/>
+                        <div className={"answer-check"} ref={`taskId+44`}>{answer}</div>
                     </React.Fragment>
-                    }))
-                    }
-
-
-            else{return <React.Fragment>
-                <div>Ты куда зашёл, петух</div></React.Fragment>}
+                }))
+            }
 
         }))}
         return (
@@ -70,19 +62,16 @@ const mapDispatchToProps = (dispatch) => {
         grammarLessonsData: bindActionCreators(topic, dispatch),
 
     }
-
 };
 const mapStateToProps = (state) => {
-
-
     return {
         persons: state.persons,
         auth: state.isLogged,
-        grammarLessons: state.grammarLessons,
+         programmingLessons: state.programmingLessons,
         getActiveLesson: state.activeLesson
 
 
     }
 };
 
-export default withRouter( connect(mapStateToProps, mapDispatchToProps)(GrammarLessonTest));
+export default withRouter( connect(mapStateToProps, mapDispatchToProps)(ProgrammingLessonTest));

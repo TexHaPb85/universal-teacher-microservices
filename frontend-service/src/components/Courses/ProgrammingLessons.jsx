@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {Link, Route, Switch, withRouter} from "react-router-dom";
 import "../../css/courses.css"
 import {connect} from "react-redux";
-import {topic} from "../../actions/personActions";
+import {programmingLessonsFetch} from "../../actions/personActions";
 import {bindActionCreators} from "redux";
 
-export const  grammarTopic =()=>{
+export const  programmingLesson =()=>{
 
     let str = window.location.pathname;
     let n = str.lastIndexOf('/');
@@ -13,14 +13,14 @@ export const  grammarTopic =()=>{
     return str.substring(n + 1);
 }
 
-class GrammarLessons extends Component {
+class ProgrammingLessons extends Component {
     componentWillMount() {
-        this.props.grammarLessonsData(topic())
+        this.props.programmingLessonsData(programmingLessonsFetch())
     }
 
     render() {
-
-        const grammarLessons =()=>{  let x=1; return (this.props.grammarLessons.map(({topic,lessonId}) => {
+            console.log(this.props.programmingLessons)
+        const grammarLessons =()=>{let x=1; return (this.props.programmingLessons.map(({topic,lessonId}) => {
 
             return <Link onClick={this.props.getLesson.bind(this,lessonId,x)} key={x} to={`${topic}/${lessonId}`}><li  id={lessonId}>{topic} {x++} </li></Link>
 
@@ -33,7 +33,7 @@ class GrammarLessons extends Component {
                     }
 
                 </ul>
-
+                    huh?
             </section>
 
         )
@@ -47,7 +47,7 @@ const mapDispatchToProps = (dispatch) => {
         getLesson: (lessonId,x) => {
             dispatch({type: "GET_ACTIVE_LESSON",payload: {lessonIdCheck:lessonId,x:x} })
         },
-        grammarLessonsData: bindActionCreators(topic, dispatch)
+        programmingLessonsData: bindActionCreators(programmingLessonsFetch, dispatch)
 
     }
 
@@ -58,8 +58,8 @@ const mapStateToProps = (state) => {
     return {
         persons: state.persons,
         auth: state.isLogged,
-        grammarLessons: state.grammarLessons,
+        programmingLessons: state.programmingLessons,
     }
 };
 
-export default withRouter( connect(mapStateToProps, mapDispatchToProps)(GrammarLessons));
+export default withRouter( connect(mapStateToProps, mapDispatchToProps)(ProgrammingLessons));

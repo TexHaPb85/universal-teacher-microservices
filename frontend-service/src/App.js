@@ -19,6 +19,10 @@ import GrammarLessonTest from "./components/Courses/GrammarLessonTest";
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import CoursesNavigation from "./components/Courses/CoursesNavigation";
+import ProgammingCourses from "./components/Courses/ProgrammingCourses";
+import ProgrammingLessons from "./components/Courses/ProgrammingLessons";
+import ProgrammingLesson from "./components/Courses/ProgrammingLessson";
+import ProgrammingLessonTest from "./components/Courses/ProgrammingLessonTest";
 
 
 class App extends React.Component {
@@ -46,6 +50,11 @@ class App extends React.Component {
                         <Route path={'/english/grammar/:lesson'}   exact component={GrammarLessons}/>
                         <Route path={'/english/grammar/:lesson/:lessonId'}  exact component={GrammarLesson}/>
                         <Route path={'/english/grammar/:lesson/:lessonId/tests'}  exact component={GrammarLessonTest}/>
+                    <Route path={"/programming"} exact component={ProgammingCourses}/>
+                    <Route path={"/programming/topic/:lessons"} exact component={ProgrammingLessons}/>
+                    <Route path={"/programming/topic/:lessons/:lessonId"} exact component={ProgrammingLesson}/>
+                    <Route path={"/programming/topic/:lessons/:lessonId/tests"} exact component={ProgrammingLessonTest}/>
+
 
 
                     <Route path={"/home"} component={Homepage}/>

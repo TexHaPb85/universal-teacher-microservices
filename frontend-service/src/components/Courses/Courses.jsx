@@ -58,7 +58,7 @@ class Courses extends Component {
 
                     </div>
                     <div className="carousel-cell themes"><img src={Image2}/>
-                        <Link className={"link-cell"} to={"/"}>
+                        <Link className={"link-cell"} to={"/programming"}>
                             <h2> Программирование</h2>
                             <p>В этом курсе вам раскажут как прожить и многое другое</p>
                         </Link>

@@ -131,4 +131,36 @@
 display: none;
     visibility: hidden;
 }
-body {oncontextmenu:"return false;"}
+.train-input.input-false{
+    border: 2px solid red;
+}
+
+.train-input.input-true{
+    border: 2px solid #2e842f;
+
+}
+.train-input{
+    width:100px;
+    height: 30px;
+    margin: 10px;
+    border: 1px solid #4A7C67;
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.train-button{
+    width:100px;
+    height: 30px;
+    margin: 10px;
+    background: #4A7C67;
+    color: #ffffff;
+}
+
+.train-container{
+    margin: 30px 0 0 30px;
+    min-height: 100vh;
+}
+
+.train-container h3 {
+    margin: 20px 0;
+}

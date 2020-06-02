@@ -13,11 +13,33 @@ export const googleAuth = () => {
         // }))
     }};
 
+export const programmingFetch =() =>{
+    return function (dispatch) {
+        dispatch({type: "GET_TEST_START"});
+        login.programmingLessonsFetch().then((res) => dispatch({
+            type: "GET_PRGRMNG_TOPICS",
+            payload: res.data
+        })).catch((response) => dispatch({
+            type: "deadData",
+            error: response.error
+        }))
+    }};
+export const programmingLessonsFetch = () =>{
+    return function (dispatch) {
+        dispatch({type: "RESET_TOPICS"});
+        login.programmingtopicFetch().then((res) => dispatch({
+            type: "GET_PRGRMNG_TOPIC_LESSONS",
+            payload: res.data
+        })).catch((response) => dispatch({
+            type: "deadData",
+            error: response.error
+        }))
+    }};
 export const grammarFetch =() =>{
     return function (dispatch) {
         dispatch({type: "GET_TEST_START"});
         login.grammarLessonsFetch().then((res) => dispatch({
-            type: "GET_GRAMMAR_LESSONS",
+            type: "GET_GRAMMAR_TOPICS",
             payload: res.data
         })).catch((response) => dispatch({
             type: "deadData",
@@ -35,6 +57,7 @@ export const topic = () =>{
             error: response.error
         }))
     }};
+
 
 export const irregularVerbs =() =>{
     return function (dispatch) {

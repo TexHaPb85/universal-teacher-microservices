@@ -1,12 +1,22 @@
 import axios from 'axios'
 import {grammarTopic} from "../components/Courses/GrammarLessons"
+import {programmingLesson} from "../components/Courses/ProgrammingLessons"
 import store from "../index";
 // const  WEB_API_URL = 'http://localhost:8081';
 
 
 class Login {
 
+    programmingLessonsFetch(){
+        return  axios.get(`${'http://localhost:9002/study/'}`)
 
+    }
+        programmingtopicFetch() {
+        console.log(grammarTopic())
+        console.log(programmingLesson())
+        const programmingPath = programmingLesson()
+        return  axios.get(`${'http://localhost:9002/study/'+programmingPath}`)
+    }
     topicFetch() {
 
         const grammarPath = grammarTopic()
