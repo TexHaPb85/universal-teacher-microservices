@@ -9,20 +9,29 @@ class GrammarLesson extends Component {
     componentWillMount() {}
     render() {
         const {lessonIdCheck,x} = this.props.getActiveLesson
-        console.log(lessonIdCheck===window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1))
-        const grammarLessons =()=>{ return (this.props.grammarLessons.map(({topic,lessonId,youTubeUrl,textDescription}) => {
-            if (lessonId === lessonIdCheck && parseInt(window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1))===lessonIdCheck){
-            return <React.Fragment>
-                <div>Описаник Урока: {textDescription}</div>
-                <iframe width="729" height="410" src={youTubeUrl} frameBorder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen></iframe>
+        const checkRouteId = parseInt(window.location.pathname.
+        substring(window.location.pathname.lastIndexOf('/') + 1)) ===lessonIdCheck
 
-            </React.Fragment>}
-            else{return <React.Fragment>
-                <div>Ты куда зашёл, петух</div></React.Fragment>}
 
-        }))}
+        const grammarLessons =()=>{ let checkRoute=false;
+            (this.props.grammarLessons.map(({topic,lessonId,youTubeUrl,textDescription}) => {
+                if (checkRouteId && lessonId===lessonIdCheck){
+                    checkRoute=true;  }}))
+            if(checkRoute) return (this.props.grammarLessons.map(({topic,lessonId,youTubeUrl,textDescription}) => {
+                if (lessonId === lessonIdCheck && checkRouteId)
+                    return <React.Fragment>
+
+                        {console.log(checkRoute+"CHEGO")}
+                        <div>Описаник Урока: {textDescription}</div>
+                        <iframe width="729" height="410" src={youTubeUrl} frameBorder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen></iframe>
+
+                    </React.Fragment>}))
+            if(!checkRoute) return(
+                <React.Fragment>
+                    <div>Ты куда зашёл, петух</div></React.Fragment>)
+        }
         return (
             <section className={"verbs"}>
                 <h1>Урок {x} </h1>

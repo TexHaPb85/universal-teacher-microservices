@@ -49,6 +49,7 @@
 .home-button1:hover{
     background: var(--maincolor);
     color: #fff;
+    cursor: pointer;
 }
 
 

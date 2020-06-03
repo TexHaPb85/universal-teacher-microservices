@@ -28,7 +28,7 @@ class Header extends Component {
             <StickyHeader header={
 
                 <React.Fragment>
-                    {/*<NavLink to={"/"}>*/}
+
                     <img src={logotype} alt="ekekke" className="Logo" useMap={"#Logo"} />
                     <map name={"Logo"}>
                         <NavLink replace={this.props.location.pathname === "/"} to={"/"} >
@@ -36,8 +36,8 @@ class Header extends Component {
                             <area shape={"poly"}  coords={"20,0,0,50,50,103.5,100,50,45,0"} />
                         </NavLink>
                     </map>
-                    {/*</NavLink>*/}
-                    <div class='container'>
+
+                    <div className='container'>
                         <div className='item1'>
 
                         </div>
@@ -75,46 +75,7 @@ class Header extends Component {
 
                     </Login>}
                 </React.Fragment>}>
-                <React.Fragment>
-                    <img src={logotype} alt="ekekke" className="Logo"/>
-                    <div class='container'>
-                        <div className='item1'>
-
-                        </div>
-
-                        {/*<Async>*/}
-                        <Route>
-                            {(!this.props.isLogged) ? <ul className="item2">
-                                {/*{this.state.persons.map(person => <li>{person}</li>)}*/}
-
-                                <li className='btnh1'><NavLink to='#'>Учиться </NavLink></li>
-                                <li className='btnh2'><NavLink to='#'> Стать автором </NavLink></li>
-                                <li className="login"><NavLink to='#'
-                                                               onClick={this.props.createEventHandler}>Войти </NavLink>
-                                </li>
-                            </ul> : <ul className="loggedHeader">
-
-
-                                <li><NavLink replace={this.props.location.pathname === "/home"}
-                                             to="/home">Профиль</NavLink></li>
-                                <li><NavLink to="#">Курсы</NavLink></li>
-                                <li><NavLink to="#">Помощь</NavLink></li>
-                                <li><NavLink to="/" onClick={this.props.onLogout}>Выход</NavLink></li>
-
-                            </ul>}
-                        </Route>
-                        {/*</Async>*/}
-
-                    </div>
-
-                    {this.props.creating && <Backdrop closeModal={this.props.closeModal}/>}
-                    {this.props.creating &&
-                    <Login title="Войти" googleAuth={this.props.googleAuth} onRegister={this.props.onRegister}
-                           canConfirm
-                           onExit1={this.props.onExit1}>
-
-                    </Login>}
-                </React.Fragment>
+                <div className={"container"}></div>
 
             </StickyHeader>
 

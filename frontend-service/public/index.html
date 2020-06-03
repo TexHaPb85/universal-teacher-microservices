@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="utf-8" />
       <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500%7CRoboto%7CSource+Sans+Pro&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src http://localhost:9001/ http://localhost:9002/ 'self';
+      script-src 'self';
+      style-src 'self' 'unsafe-inline';
+      font-src 'self' https://fonts.gstatic.com/;img-src 'self' data:;
+      base-uri 'self';
+      frame-src https://www.youtube.com/embed/;
+      ">
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"

@@ -7,12 +7,12 @@ class  Footer extends  Component{
 
         return(
             <footer >
-                <div class="container-footer">
+                <div className="container-footer">
                     <div className="phone_number">
-                        <img class="phone-img" src={Phone} alt="phone-alt"/>
+                        <img className="phone-img" src={Phone} alt="phone-alt"/>
                         <p> +(380)664558992</p>
                         <br/>
-                        <img class="email-img" src={Email} alt="email-alt"/>
+                        <img className="email-img" src={Email} alt="email-alt"/>
                         <p>Email: ubersobaka@gmail.com </p>
                     </div>
 
@@ -41,7 +41,7 @@ class  Footer extends  Component{
 
                 </div>
 
-                <p class="license"><strong>&copy;2020 Universal Teachers Inc</strong></p>
+                <p className="license"><strong>&copy;2020 Universal Teachers Inc</strong></p>
             </footer>
 
         )

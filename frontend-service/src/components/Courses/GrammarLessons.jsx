@@ -22,16 +22,15 @@ class GrammarLessons extends Component {
 
         const grammarLessons =()=>{  let x=1; return (this.props.grammarLessons.map(({topic,lessonId}) => {
 
-            return <Link onClick={this.props.getLesson.bind(this,lessonId,x)} key={x} to={`${topic}/${lessonId}`}><li  id={lessonId}>{topic} {x++} </li></Link>
+            return <Link onClick={this.props.getLesson.bind(this,lessonId,x)} key={x} to={`${topic}/${lessonId}`}><li  id={lessonId}>Урок {x++} </li></Link>
 
 
         }))}
         return (
             <section className={"verbs"}>
                 <ul className={"english-list"}>
-                    { grammarLessons()
-                    }
-
+                    { grammarLessons()}
+                    <Link to={"/english/grammar/edit/"+grammarTopic()}>Добавить новый урок</Link>
                 </ul>
 
             </section>

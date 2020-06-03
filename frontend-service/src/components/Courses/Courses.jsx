@@ -46,7 +46,7 @@ class Courses extends Component {
             <Route>
 
                 <section className={"courses"}>
-                    <h1>Курсы</h1>
+
                     <CoursesNavigation/>
                     <div className="courses-flex">
 

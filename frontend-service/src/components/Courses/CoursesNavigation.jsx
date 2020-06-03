@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
-import {Link, NavLink, Route, withRouter} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import "../../css/courses.css"
-import {connect} from "react-redux";
+
 
 
 
 const CoursesNavigation =  () =>
 
     <React.Fragment>
+        <h1 className={"courses-header"}>Страница курсов</h1>
     <ul className={"courses-menu"}>
         <li><NavLink replace={window.location.pathname === "/courses"} to={"/courses"}>Все темы </NavLink></li>
-        <li><NavLink replace={window.location.pathname === "/courses/all-courses"} to={"/courses/all-courses"}>Все
-            курсы</NavLink></li>
         <li><NavLink replace={window.location.pathname === "/courses/my-courses"} to={"/courses/my-courses"}>Мои
             курсы</NavLink></li>
 

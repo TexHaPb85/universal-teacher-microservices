@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import home from "../../css/home.css"
+import {Link} from "react-router-dom";
 class Home extends  Component{
     render() {
 
@@ -12,7 +13,7 @@ class Home extends  Component{
                         <div className="home-text">
                             <h2>Получите востребованные<br/>знания бесплатно</h2>
                             <p>Онлайн-курсы от ведущих вузов и компаний страны</p>
-                            <button  className="home-button1">Посмотреть <br/>каталог</button>
+                            <Link to={"/courses"}><button  className="home-button1">Посмотреть <br/>каталог</button></Link>
                         </div>
                     </div>
 

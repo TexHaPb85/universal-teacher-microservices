@@ -32,22 +32,37 @@ class VerbsTrain extends Component {
                 break;
         }
     }
+    handleNounVerbsInput = () => {
+
+        if(this.props.randTrain.nounTranslation === document.getElementById("noun-input1").value) {
+            document.getElementById("noun-input1").classList.add('input-true');
+            document.getElementById("noun-input1").classList.remove('input-false');
+        }
+        else{ document.getElementById("noun-input1").classList.add('input-false');
+            document.getElementById("noun-input1").classList.remove('input-true');}
+
+        if(this.props.randTrain.verbTranslation === document.getElementById("noun-input2").value) {
+            document.getElementById("noun-input2").classList.add('input-true');
+            document.getElementById("noun-input2").classList.remove('input-false');
+        }
+        else{ document.getElementById("noun-input2").classList.add('input-false');
+            document.getElementById("noun-input2").classList.remove('input-true');}
+    }
     handlePhrVerbsInput = () =>{
         let inputCounter =0
-    console.log(this.props.randTrain)
+                this.props.randTrain.map(({phrasalVerb, id}) => {
 
-        for (let i in this.props.randTrain.length) {
-            this.props.randTrain.map(({phrasalVerb}) => {
-                console.log(phrasalVerb.split(" ").pop() === document.getElementsByClassName(
-                    "train-input")[inputCounter++].value)
                     if (phrasalVerb.split(" ").pop() === document.getElementsByClassName(
-                        "train-input")[inputCounter++].value) {
-                        console.log("OMG")
+                        "train-input")[inputCounter].value) {
+                        document.getElementById("phrInput"+id).classList.add('input-true');
+                        document.getElementById("phrInput"+id).classList.remove('input-false');
+                    } else {
+                        document.getElementById("phrInput"+id).classList.add('input-false');
+                        document.getElementById("phrInput"+id).classList.remove('input-true');
                     }
-                }
-            )
-        }
-
+                    console.log("CYCLE NUMBER "+inputCounter)
+                    inputCounter++;
+                })
 }
     handleIrrVerbsInput = () => {
         if(this.props.randTrain.pastSimple === document.getElementById("verb-input1").value) {
@@ -69,7 +84,10 @@ class VerbsTrain extends Component {
         const inputs = document.querySelectorAll('.train-input');
         for (let i = 0;  i < inputs.length; i++) {
             inputs[i].value = '';
-        }
+            inputs[i].classList = 'train-input';
+
+        } document.getElementById('answer-show').style.display = "none";
+
 
         switch (window.location.pathname) {
             case "/english/irregular-verbs/train":
@@ -82,6 +100,10 @@ class VerbsTrain extends Component {
                 this.props.nounTrain(nounTrain());
                 break;
         }
+    }
+    handleAnswers = () => {
+
+        document.getElementById('answer-show').style.display = "block";
     }
     render() {
         const project = () => {
@@ -97,6 +119,9 @@ class VerbsTrain extends Component {
                                 <input className={"train-input"}  id={"verb-input2"} onChange={this.handleChange} type={"text"}/>
                                 <button className={"train-button"} onClick={this.handleIrrVerbsInput}>Перевірити</button>
                                 <button className={"train-button"} onClick={this.handleUpdate}>Оновити</button>
+                                <button className={"train-button"} onClick={this.handleAnswers} >Відповідь</button>
+                                <div id={"answer-show"}>{Object.values(this.props.randTrain).slice(2,4)+" "}
+                                </div>
                             </div>
                         </div>
                     </React.Fragment>;
@@ -106,10 +131,15 @@ class VerbsTrain extends Component {
                             <h2>Тренування фразових дієслів</h2>
                             <h3>Ви отримуєте для тренування одне фразове слово</h3>
                             <h3>Ваша задача ввести  </h3>
-                            <div>{this.props.randTrain.map(({verb,translation}) => <div>{verb}{console.log(verb+"WTF?")}
-                            <input className={"train-input"} onChange={this.handleChange} type={"text"}/>{translation}</div>)}</div>
+                            <div>{this.props.randTrain.map(({verb,translation,id}) => <div>{verb}
+                            <input className={"train-input"} onChange={this.handleChange} id={"phrInput"+id} type={"text"}/>{translation}</div>)}</div>
                             <button className={"train-button"} onClick={this.handlePhrVerbsInput}>Перевірити</button>
                             <button className={"train-button"} onClick={this.handleUpdate}>Оновити</button>
+                            <button className={"train-button"} onClick={this.handleAnswers} >Відповідь</button>
+                            <div id={"answer-show"}>{Object.values(this.props.randTrain).map(({phrasalVerb})=>{
+                              return   `${phrasalVerb}`
+                            })}
+                            </div>
                         </div>
                     </React.Fragment>;
                 case "/english/noun-verbs/train":
@@ -119,11 +149,15 @@ class VerbsTrain extends Component {
                             <h3>Ви отримуєте для тренування одне слово навмання</h3>
                             <h3>Ваша задача ввести два переклади цього слова. Спочатку переклад в формі іменника,
                                 а потім у формі дієслова</h3>
-                            <div>{this.props.randTrain.nounVerb}<input className={"train-input"} type={"text"}/>
-                                <input className={"train-input"} onChange={this.handleChange} type={"text"}/>
-                                <button className={"train-button"}>Перевірити</button>
+                            <div>{this.props.randTrain.nounVerb}<input className={"train-input"} id={"noun-input1"} type={"text"}/>
+                                <input className={"train-input"} id={"noun-input2"}  onChange={this.handleChange} type={"text"}/>
+                                <button className={"train-button"} onClick={this.handleNounVerbsInput}>Перевірити</button>
                                 <button className={"train-button"} onClick={this.handleUpdate}>Оновити</button>
+                                <button className={"train-button"} onClick={this.handleAnswers} >Відповідь</button>
+                                <div id={"answer-show"}>{Object.values(this.props.randTrain).slice(2,4)+" "}
+                                </div>
                             </div>
+
                         </div>
                     </React.Fragment>;
 
@@ -135,6 +169,7 @@ class VerbsTrain extends Component {
             <div>
 
                 {project()}
+
             </div>
         )
     }

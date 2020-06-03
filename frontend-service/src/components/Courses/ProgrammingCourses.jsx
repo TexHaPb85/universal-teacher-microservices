@@ -17,6 +17,7 @@ class ProgammingCourses extends Component {
 
         const grammarLessons =()=>{ return (this.props.programming.map(lesson => {
             return <React.Fragment>
+                {console.log(lesson)}
                 <Link onClick={this.props.getTopic.bind(this,lesson)}  to={"programming/topic/"+lesson}>
                     <li key={lesson}>{lesson}</li></Link>
             </React.Fragment>
@@ -32,6 +33,7 @@ class ProgammingCourses extends Component {
                         {grammarLessons()}
 
                     </ul>
+                    <h1>chego</h1>
                 </div>
 
             </section>

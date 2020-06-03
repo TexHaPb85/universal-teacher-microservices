@@ -6,6 +6,7 @@ const initialState = {
     nounVerbs:[{"id":1,"infinitive":"ch","pastSimple":"ew","pastParticiple":"d","translation":"d"}],
     grammar:["english"],
     programming:[""],
+    newLesson:{},
     activeGrammarTopic:'',
     grammarLessons:[],
     programmingLessons:[],
@@ -29,6 +30,9 @@ const reducer = (state = initialState, action) => {
     if (action.type === "GET_TEST_START"){
         return  {...state}
     }
+    if (action.type === "GET_NEW_LESSON"){
+        return  {...state}
+    }
     if (action.type === "RESET_TOPICS"){
         return  {...state,grammarLessons:initialState.grammarLessons}
     }
@@ -36,6 +40,9 @@ const reducer = (state = initialState, action) => {
         return  {...state, randTrain: initialState.randTrain}
     }
 
+    if(action.type==="ADD_NEW_LESSON"){
+        return {...state, newLesson: action.payload}
+    }
     if(action.type==="GET_PRGRMNG_TOPICS"){
         return {...state, programming: action.payload}
     }

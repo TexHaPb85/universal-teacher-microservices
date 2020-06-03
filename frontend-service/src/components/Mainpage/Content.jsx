@@ -5,7 +5,7 @@ class Content extends  Component{
     render() {
 
         return(
-            <section class="container-content">
+            <section className="container-content">
                  <h1>Выбери свой путь!</h1>
                 <Slider/>
             </section>

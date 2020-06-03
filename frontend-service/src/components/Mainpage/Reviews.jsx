@@ -17,12 +17,12 @@ class Reviews extends  Component{
     render() {
         return(
 
-            <section class="container-content">
+            <section className="container-content">
                 <h1>Ваши отзывы</h1>
                 <div className={"review-container"}>
                     <div className={"review-card"}>
                         <img src={Anastas} alt="123"/>
-                    <Scrollbars git>
+                    <Scrollbars>
                         <p>Я начинаю свой путь в новую для себя сферу вместе с Universal Teachers. Для меня это новый
                             неизведанный мир. Возлагаю очень большие надежды, мне очень нужна новая профессия.
                             Интересная подача материала, все подробно объяснятся, уже начинаю что-то понимать.

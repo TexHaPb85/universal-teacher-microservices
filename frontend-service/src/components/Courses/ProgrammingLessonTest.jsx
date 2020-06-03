@@ -1,4 +1,4 @@
-import React, {Component,useState} from 'react';
+import React, {Component} from 'react';
 import {Link, withRouter} from "react-router-dom";
 import "../../css/courses.css"
 import {connect} from "react-redux";
@@ -12,18 +12,19 @@ class ProgrammingLessonTest extends Component {
             let taskNumber = 0;
             let taskIdCount =0;
             if (lessonId === this.props.getActiveLesson.lessonIdCheck) {
-                return (tasks.map(({taskId, question, answer,}) => {
-
-
+                return (tasks.map(({taskId, answer}) => {
                     if(parseInt(document.getElementsByClassName("task-input")[taskIdCount++].id)===taskId && answer===document.getElementsByClassName(
                         "task-input")[taskNumber++].value){
-                        document.getElementById(taskId).style.background = "blue";
+                        document.getElementById(taskId).classList.add('input-true');
+                        document.getElementById(taskId).classList.remove('input-false');
                     }
-
+                    else{
+                        document.getElementById(taskId).classList.add('input-false');
+                        document.getElementById(taskId).classList.remove('input-true');
+                    }
                 }))
             }
         })
-
         e.preventDefault()
     }
     render() {

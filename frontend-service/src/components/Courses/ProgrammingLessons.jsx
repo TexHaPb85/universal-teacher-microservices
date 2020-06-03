@@ -22,7 +22,7 @@ class ProgrammingLessons extends Component {
             console.log(this.props.programmingLessons)
         const grammarLessons =()=>{let x=1; return (this.props.programmingLessons.map(({topic,lessonId}) => {
 
-            return <Link onClick={this.props.getLesson.bind(this,lessonId,x)} key={x} to={`${topic}/${lessonId}`}><li  id={lessonId}>{topic} {x++} </li></Link>
+            return <Link onClick={this.props.getLesson.bind(this,lessonId,x)} key={x} to={`${topic}/${lessonId}`}><li  id={lessonId}>Урок {x++} </li></Link>
 
 
         }))}

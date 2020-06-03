@@ -5,7 +5,7 @@ import Mainpage from "./components/Mainpage/MainPage"
 import Courses from "./components/Courses/Courses"
 import MyCourses from "./components/Courses/MyCourses"
 import AllThemes from "./components/Courses/AllThemes"
-import AllCourses from "./components/Courses/AllCourses"
+
 import EnglishCourses from "./components/Courses/EnglishCourses"
 import IrregularVerbs from "./components/Courses/IrregularVerbs"
 import PhrasalVerbs from "./components/Courses/PhrasalVerbs"
@@ -23,6 +23,7 @@ import ProgammingCourses from "./components/Courses/ProgrammingCourses";
 import ProgrammingLessons from "./components/Courses/ProgrammingLessons";
 import ProgrammingLesson from "./components/Courses/ProgrammingLessson";
 import ProgrammingLessonTest from "./components/Courses/ProgrammingLessonTest";
+import NewLesson from "./components/Courses/NewLesson";
 
 
 class App extends React.Component {
@@ -47,12 +48,14 @@ class App extends React.Component {
                         <Route path={"/english/phrasal-verbs/train"}  component={VerbsTrain}/>
                         <Route path={"/english/noun-verbs"} exact component={NounVerbs}/>
                         <Route path={"/english/noun-verbs/train"}  component={VerbsTrain}/>
+                    <Route path={"/english/grammar/edit/:topic"}  exact component={NewLesson}/>
                         <Route path={'/english/grammar/:lesson'}   exact component={GrammarLessons}/>
                         <Route path={'/english/grammar/:lesson/:lessonId'}  exact component={GrammarLesson}/>
                         <Route path={'/english/grammar/:lesson/:lessonId/tests'}  exact component={GrammarLessonTest}/>
+
                     <Route path={"/programming"} exact component={ProgammingCourses}/>
                     <Route path={"/programming/topic/:lessons"} exact component={ProgrammingLessons}/>
-                    <Route path={"/programming/topic/:lessons/:lessonId"} exact component={ProgrammingLesson}/>
+                    <Route path={"/programming/topic/:lessons/:lessonId"}  exact component={ProgrammingLesson}/>
                     <Route path={"/programming/topic/:lessons/:lessonId/tests"} exact component={ProgrammingLessonTest}/>
 
 
@@ -60,7 +63,6 @@ class App extends React.Component {
                     <Route path={"/home"} component={Homepage}/>
                 </Switch>
                 <Switch>
-                    <Route path={"/courses/all-courses"} exact component={AllCourses}/>
                     <Route path={"/courses/my-courses"}   component={MyCourses}/>
 
                 </Switch>

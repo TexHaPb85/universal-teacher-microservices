@@ -1,6 +1,6 @@
 import axios from "axios"
 import login from "../services/login"
-
+import store from "../index";
 export const googleAuth = () => {
     return function (dispatch) {
         dispatch({type: "FETCH_START"});
@@ -12,6 +12,29 @@ export const googleAuth = () => {
         //     error: response.error
         // }))
     }};
+
+export const newLessonPost =() => {
+    // console.log(JSON.stringify({data}))
+    console.log(JSON.stringify(store.getState().newLesson))
+   const {youTubeUrl,textDescription,topic} = store.getState().newLesson
+    return function (dispatch) {
+    dispatch({type: "GET_NEW_LESSON"});
+
+        axios.post("http://localhost:9001/grammar/edit",
+            {youTubeUrl:youTubeUrl,textDescription:textDescription,topic:topic}).then((res) => dispatch({
+
+        type: "AADAS",
+        payload: res.data,
+
+    },console.log(res.data))).catch((response) => dispatch({
+        type: "deadData",
+        error: response.error
+    })
+        )
+   }
+
+};
+
 
 export const programmingFetch =() =>{
     return function (dispatch) {
@@ -48,7 +71,7 @@ export const grammarFetch =() =>{
     }};
 export const topic = () =>{
     return function (dispatch) {
-        dispatch({type: "RESET_TOPICS"});
+        dispatch({type: "GET_TEST_START"});
         login.topicFetch().then((res) => dispatch({
             type: "GET_TOPIC_LESSONS",
             payload: res.data

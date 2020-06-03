@@ -7,13 +7,19 @@ import store from "../index";
 
 class Login {
 
+    grammarLessonPost({data}) {
+        console.log(JSON.stringify({data})+"\n DA TI ZAEBAL UZHE")
+        return axios.post("http://localhost:9001/grammar/edit",
+            {data})
+    }
+
+
     programmingLessonsFetch(){
-        return  axios.get(`${'http://localhost:9002/study/'}`)
+        return  axios.get('http://localhost:9002/study/')
 
     }
         programmingtopicFetch() {
-        console.log(grammarTopic())
-        console.log(programmingLesson())
+
         const programmingPath = programmingLesson()
         return  axios.get(`${'http://localhost:9002/study/'+programmingPath}`)
     }

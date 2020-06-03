@@ -7,10 +7,11 @@
     justify-content: space-around;
     justify-items: flex-end;
     background-color: var(--maincolor);
-
-
-
 }
+
+
+
+
 .item1{
     flex-grow:6;
 }
