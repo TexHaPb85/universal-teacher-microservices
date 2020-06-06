@@ -21,7 +21,12 @@ public class AllUsersController {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
-    @PostMapping("users/{userID}")
+    @PostMapping("users")
+    public ResponseEntity<User> addUser(@RequestBody User user){
+        return ResponseEntity.ok(userService.saveUser(user));
+    }
+
+    @PatchMapping("users/{userID}")
     public ResponseEntity<User> updateUser(@PathVariable String userID, @RequestBody User user) {
         return ResponseEntity.ok(userService.editUserById(userID, user));
     }
