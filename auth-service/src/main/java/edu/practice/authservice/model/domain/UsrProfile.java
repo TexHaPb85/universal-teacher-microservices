@@ -22,7 +22,7 @@ public class UsrProfile implements Serializable {
     private String login;
     private String photoURL;
     private Integer age;
-    private Long experience;
+    private Long experience = 0L;
     private String locale;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
