@@ -1,6 +1,7 @@
-package edu.practice.englishstudyservice.configuration;
+package edu.practice.programmingstudyservice.config;
 
-import edu.practice.englishstudyservice.domain.dto.UserDTO;
+
+import edu.practice.programmingstudyservice.entities.UserDTO;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

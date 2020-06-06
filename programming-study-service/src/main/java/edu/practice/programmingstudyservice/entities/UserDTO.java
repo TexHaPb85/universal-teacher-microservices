@@ -1,4 +1,4 @@
-package edu.practice.englishstudyservice.domain.dto;
+package edu.practice.programmingstudyservice.entities;
 
 public class UserDTO {
     private String userID;
