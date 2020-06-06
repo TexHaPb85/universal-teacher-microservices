@@ -3,7 +3,7 @@ spring:
     name: english-study-service
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: https://ut-config-service.herokuapp.com/
       fail-fast: true
       password: 1234
       username: user

@@ -2,15 +2,18 @@ package edu.practice.authservice.model.domain;
 
 
 import edu.practice.authservice.model.enums.Role;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Set;
 
 @Entity
 @Table(name = "app_users")
-public class User implements Serializable {
+public class User implements Serializable, UserDetails {
     @Id
     //@GeneratedValue(strategy = GenerationType.AUTO) ід буде приходити з гугла, тому немає сенсу їх автогенерувати
     private String id;
@@ -24,11 +27,10 @@ public class User implements Serializable {
     @JoinColumn(name = "profile_id", referencedColumnName = "prof_id")
     private UsrProfile profile;
 
-    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.LAZY)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
-
 
     public User(String id, @Email String email, String password, UsrProfile profile) {
         this.id = id;
@@ -64,8 +66,39 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return roles;
+    }
+
+    @Override
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public String getUsername() {
+        return email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 
     public void setPassword(String password) {

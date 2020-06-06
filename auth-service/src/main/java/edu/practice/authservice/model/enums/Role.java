@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
  * interface which represents an authority granted to an Authentication object.
  */
 public enum Role implements GrantedAuthority {
+    ROLE_ADMIN,
     ROLE_USER,
     ROLE_TEACHER;
 
