@@ -9,18 +9,5 @@ zuul:
     connect-timeout-millis: 50000
     socket-timeout-millis: 50000
 
-  routes:
-    auth-service:
-      path: /uaa/** #path that will be intercepted
-      url: auth-service #which url the request will be mapped to
-      stripPrefix: false #if zuul should replace the "/uaa/" segment
-      sensitiveHeaders:
-
-    account-service:
-      path: /accounts/**
-      serviceId: account-service
-      stripPrefix: false
-      sensitiveHeaders:
-
 server:
   port: 9000
